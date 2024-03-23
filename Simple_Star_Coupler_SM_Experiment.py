@@ -197,20 +197,32 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
     p.close()
 
 def run_and_make_video():
-        f = plt.figure(dpi=150)
-        Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-        sim.run(mp.at_every(0.5, Animate), until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=5), decay_by=1e-2))
-        filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
-        fps = 10
-        Animate.to_mp4(fps, filename)
+        try:
+            f = plt.figure(dpi=150)
+            Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
+            sim.run(mp.at_every(0.5, Animate), until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
+            filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
+            fps = 10
+            Animate.to_mp4(fps, filename)
+        except:
+            print("Error occured in run_and_make_video()\n")
+            print("     Issue with animation and mp4.\n")
+            sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
 
 def short_test_run():
-        f = plt.figure(dpi=150)
-        Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-        sim.run(mp.at_every(0.5, Animate), until=25)
-        filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
-        fps = 10
-        Animate.to_mp4(fps, filename)
+        try:
+            f = plt.figure(dpi=150)
+            Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
+            sim.run(mp.at_every(0.5, Animate), until=25)
+            filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
+            fps = 10
+            Animate.to_mp4(fps, filename)
+        except:
+            print("Error occured in short_test_run()\n")
+            print("     Issue with animation and mp4.\n")
+            sim.run(until=25)
+           
+
 
 def load_sim_from_dump(filename):
     sim = mp.Simulation(resolution = res,
@@ -245,8 +257,13 @@ for iteration in range(len(rot_angles)):
         input_monitors = create_input_monitors();
         output_monitors = create_output_monitors();
         sim.init_sim()
-        run_and_make_video()
-        create_pdf_output(input_monitors, output_monitors, iteration)
+        # run_and_make_video()
+        short_test_run()
+        try:
+            create_pdf_output(input_monitors, output_monitors, iteration)
+        except:
+            print("Error in create_pdf_output()\n")
+
         sim.dump_structure("Simple_Star_Coupler_SM_STRUCTURE") #STRUCTURE LOADING DOESN'T WORK
         sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
     else:
@@ -260,8 +277,12 @@ for iteration in range(len(rot_angles)):
         input_monitors = create_input_monitors();
         output_monitors = create_output_monitors();
         sim.init_sim()
-        run_and_make_video()
-        create_pdf_output(input_monitors, output_monitors, iteration)
+        # run_and_make_video()
+        short_test_run()
+        try:
+            create_pdf_output(input_monitors, output_monitors, iteration)
+        except:
+            print("Error in create_pdf_output()\n")
         sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
