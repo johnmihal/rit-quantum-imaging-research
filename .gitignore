@@ -3,3 +3,5 @@
 *.h5
 *.mp4
 *.pdf
+sim-dump/fields.h5
+sim-struct
