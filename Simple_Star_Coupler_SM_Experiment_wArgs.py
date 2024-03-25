@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.backends.backend_pdf import PdfPages 
 import meep as mp
+import sys
 #from meep.materials import SiO2, Si
 # %matplotlib widget
 
@@ -198,7 +199,7 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
 
 def run_and_make_video(iteration):
         try:
-            f = plt.figure(dpi=150)
+            f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
             sim.run(mp.at_every(0.5, Animate), until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
             filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
@@ -211,7 +212,7 @@ def run_and_make_video(iteration):
 
 def short_test_run(iteration):
         try:
-            f = plt.figure(dpi=150)
+            f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
             sim.run(mp.at_every(0.5, Animate), until=25)
             filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
@@ -239,53 +240,64 @@ def load_sim_from_dump(filename):
 
     return (sim, input_monitors, output_monitors)
 
+def error_msg_and_exit():
+    print("Usage: f l mode")
+    print("f = first iteration, inclusive, should be between 0 and 20")
+    print("l = last iteration inclusive, should be between 0 and 20")
+    print("mode = optional, test for test mode, none for long simulation")
+    exit(0)
+
+# ARG PARSING
+first_iteration = 0
+last_iteration = 0
+test_mode = False
+if len(sys.argv) == 3 or len(sys.argv) == 4:
+    first_iteration = int(sys.argv[1])
+    last_iteration = int(sys.argv[2])
+
+    if first_iteration < 0 or first_iteration > 20:
+        print("f is out of bounds")
+        error_msg_and_exit()
+
+    if last_iteration < 0 or last_iteration > 20 or last_iteration < first_iteration:
+        print("l is out of bounds. l >= f must be true.")
+        error_msg_and_exit()
+
+    if len(sys.argv) == 4:
+        if sys.argv[3] == "test":
+            test_mode = True
+        else:
+            print("Invalid mode.")
+            error_msg_and_exit()
+else:
+    error_msg_and_exit
 
 
 # MAIN LOOP
-for iteration in range(len(rot_angles)):
+for iteration in range(first_iteration,last_iteration+1):
     print("Iteration: ", iteration)
 
-    if (iteration == 0): #PRIMARY SETUP LOOP, THIS ONE INVOLVES COMPUTING THE STRUCTURE DATA WHICH WILL BE RESUSED IN OTHER RUNS TO SAVE TIME
-        # CREATE SIMULATION OBJECT
-        sim = mp.Simulation(resolution = res,
-                            cell_size = cell,
-                            default_material=sio2,
-                            geometry = [create_star_block()] + create_output_waveguides() + create_input_waveguides(),
-                            sources=create_source_num(iteration),
-                            boundary_layers=[mp.PML(2.0)],
-                            symmetries=[])
-        input_monitors = create_input_monitors();
-        output_monitors = create_output_monitors();
-        sim.init_sim()
-        sim.use_output_directory()
-        run_and_make_video(iteration)
-        # short_test_run(iteration)
-        try:
-            create_pdf_output(input_monitors, output_monitors, iteration)
-        except:
-            print("Error in create_pdf_output()\n")
+    sim = mp.Simulation(resolution = res,
+                cell_size = cell,
+                default_material=sio2,
+                geometry = [create_star_block()] + create_output_waveguides() + create_input_waveguides(),
+                sources=create_source_num(iteration),
+                boundary_layers=[mp.PML(2.0)],
+                symmetries=[])        
+    input_monitors = create_input_monitors();
+    output_monitors = create_output_monitors();
+    sim.init_sim()
 
-        sim.dump_structure("Simple_Star_Coupler_SM_STRUCTURE") #STRUCTURE LOADING DOESN'T WORK
-        sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
+    if test_mode:
+        short_test_run(iteration)
     else:
-        sim = mp.Simulation(resolution = res,
-                    cell_size = cell,
-                    default_material=sio2,
-                    geometry = [create_star_block()] + create_output_waveguides() + create_input_waveguides(),
-                    sources=create_source_num(iteration),
-                    boundary_layers=[mp.PML(2.0)],
-                    symmetries=[])        
-        input_monitors = create_input_monitors();
-        output_monitors = create_output_monitors();
-        sim.init_sim()
-        sim.use_output_directory()
         run_and_make_video(iteration)
-        # short_test_run(iteration)
-        try:
-            create_pdf_output(input_monitors, output_monitors, iteration)
-        except:
-            print("Error in create_pdf_output()\n")
-        sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
+        
+    try:
+        create_pdf_output(input_monitors, output_monitors, iteration)
+    except:
+        print("Error in create_pdf_output()\n")
+    sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
     
