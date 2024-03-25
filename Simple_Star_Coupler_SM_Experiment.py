@@ -196,7 +196,7 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
 
     p.close()
 
-def run_and_make_video():
+def run_and_make_video(iteration):
         try:
             f = plt.figure(dpi=150)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
@@ -209,7 +209,7 @@ def run_and_make_video():
             print("     Issue with animation and mp4.\n")
             sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
 
-def short_test_run():
+def short_test_run(iteration):
         try:
             f = plt.figure(dpi=150)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
@@ -257,8 +257,9 @@ for iteration in range(len(rot_angles)):
         input_monitors = create_input_monitors();
         output_monitors = create_output_monitors();
         sim.init_sim()
-        # run_and_make_video()
-        short_test_run()
+        sim.use_output_directory()
+        # run_and_make_video(iteration)
+        short_test_run(iteration)
         try:
             create_pdf_output(input_monitors, output_monitors, iteration)
         except:
@@ -277,8 +278,9 @@ for iteration in range(len(rot_angles)):
         input_monitors = create_input_monitors();
         output_monitors = create_output_monitors();
         sim.init_sim()
-        # run_and_make_video()
-        short_test_run()
+        sim.use_output_directory()
+        # run_and_make_video(iteration)
+        short_test_run(iteration)
         try:
             create_pdf_output(input_monitors, output_monitors, iteration)
         except:
