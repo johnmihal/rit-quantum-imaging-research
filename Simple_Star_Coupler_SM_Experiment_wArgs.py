@@ -11,7 +11,7 @@ import sys
 # To understand MEEP units see https://meep.readthedocs.io/en/latest/Introduction/#units-in-meep
 wavelength = 1.55 # wavelength can have arbitrary length units (we choose um)
 f = 1/wavelength # Frequency is defined in "natural units" as (1 um)/wavelength
-l,w,z = [60,30,0] # length,width,height of the simulation region (um)
+l,w,z = [40,30,0] # length,width,height of the simulation region (um)
 r = 30 # Star Coupler Radius (um)
 h = 25 # Star Coupler Height (um) (this gives the flat top/bottom if desired)
 waveguide_width = 0.5 # width of Si waveguide (um)
@@ -24,7 +24,7 @@ amplitudes = np.ones(len(nangles),dtype=complex) # amplitude/phase shift for eac
 # for n in range(len(nangles)):
 #     amplitudes[n]=np.exp(-1j*n)
 y_guide_size = 1 # width of eigenmode source (needs to enclose waveguide)
-dr = 10 # srces are placed at distance r+dr from confocal point
+dr = 2 # srces are placed at distance r+dr from confocal point
 neff = 2.44 # Effective slab index from Lumerical simulation
 #neff = 2.85
 res = 80 # sim resolution (pixels/um)
@@ -122,11 +122,11 @@ def create_monitor(r,dr,th,ysize=1):
     return flux
 
 def create_output_monitors():
-    output_monitors = [create_monitor(-r,-3,s,ysize=y_guide_size) for (s,a) in zip(rot_angles,amplitudes)]
+    output_monitors = [create_monitor(-r,-1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles,amplitudes)]
     return output_monitors
 
 def create_input_monitors():
-    input_monitors = [create_monitor(r,3,s,ysize=y_guide_size) for (s,a) in zip(rot_angles,amplitudes)]
+    input_monitors = [create_monitor(r,1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles,amplitudes)]
     return input_monitors
 
 def create_pdf_output(input_monitors, output_monitors, iteration):
@@ -214,14 +214,14 @@ def short_test_run(iteration):
         try:
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-            sim.run(mp.at_every(0.5, Animate), until=25)
+            sim.run(mp.at_every(0.5, Animate), until=15)
             filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
         except:
             print("Error occured in short_test_run()\n")
             print("     Issue with animation and mp4.\n")
-            sim.run(until=25)
+            sim.run(until=15)
            
 
 
