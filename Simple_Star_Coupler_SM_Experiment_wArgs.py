@@ -272,6 +272,9 @@ if len(sys.argv) == 3 or len(sys.argv) == 4:
 else:
     error_msg_and_exit
 
+print("First Iteration: ", first_iteration)
+print("Last Iteration:", last_iteration)
+print("Test Mode: ", test_mode)
 
 # MAIN LOOP
 for iteration in range(first_iteration,last_iteration+1):
