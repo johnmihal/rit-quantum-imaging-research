@@ -5,3 +5,7 @@
 *.pdf
 sim-dump/fields.h5
 sim-struct
+/sim-dump
+Simple_Star_Coupler_SM_STRUCTURE
+sim-dump/fields.h5
+sim-dump/structure.h5
