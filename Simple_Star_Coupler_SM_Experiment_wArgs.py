@@ -6,6 +6,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 import meep as mp
 import sys
 import pickle
+import math
 
 #from meep.materials import SiO2, Si
 # %matplotlib widget
@@ -17,9 +18,10 @@ l,w,z = [40,30,0] # length,width,height of the simulation region (um)
 r = 30 # Star Coupler Radius (um)
 h = 25 # Star Coupler Height (um) (this gives the flat top/bottom if desired)
 waveguide_width = 0.5 # width of Si waveguide (um)
-nguides_p = 10 # number of input waveguides above center (total numper is 2*nguides_p+1)
-nangles = np.arange(-nguides_p,nguides_p+1,1) 
-amplitudes = np.ones(len(nangles),dtype=complex) # amplitude/phase shift for each sources
+# nguides_p = 10 # number of input waveguides above center (total numper is 2*nguides_p+1)
+# nangles = np.arange(-nguides_p,nguides_p+1,1) 
+# amplitudes = np.ones(len(nangles),dtype=complex) # amplitude/phase shift for each sources
+amplitudes = None
 ## For tilted input
 # amplitudes = np.zeros(len(nangles),dtype=complex) # amplitude/phase shift for each sources
 # dl = 2*np.pi/len(nangles)
@@ -36,9 +38,14 @@ cell = mp.Vector3(l,w,z)
 # Medium definition
 si = mp.Medium(epsilon=12)
 sio2 = mp.Medium(index=1.444)
-rot_angles = [np.arcsin(i*np.sqrt((1.55)/(r*len(nangles)*neff))) for i in nangles]
-
+# rot_angles = [np.arcsin(i*np.sqrt((1.55)/(r*len(nangles)*neff))) for i in nangles]
 sim = None
+
+nangles_input = None
+nangles_output = None
+rot_angles_input = None
+rot_angles_output = None
+
 
 def create_star_block():
     # CREATE STAR COUPLER REGION AS MP MATERIAL GRID
@@ -74,11 +81,11 @@ def make_waveguide(th,l,r):
     return wg
 
 def create_input_waveguides():
-    input_waveguides = [make_waveguide(th,l,r) for th in rot_angles]
+    input_waveguides = [make_waveguide(th,l,r) for th in rot_angles_output]
     return input_waveguides
 
 def create_output_waveguides():
-    output_waveguides = [make_waveguide(th,-l,-r) for th in rot_angles]
+    output_waveguides = [make_waveguide(th,-l,-r) for th in rot_angles_output]
     return output_waveguides
 
 # ADD SOURCES
@@ -99,7 +106,7 @@ def wg_eig_src_guassian(r,dr,th,ysize=1,freq=f,bd=1,amp=1.0):
     return eig_src
 
 def create_source_num(i):
-    sources = [wg_eig_src_guassian(r,dr,rot_angles[i],ysize=y_guide_size,amp=amplitudes[i])]
+    sources = [wg_eig_src_guassian(r,dr,rot_angles_input[i],ysize=y_guide_size,amp=amplitudes[i])]
     return sources
 
 # Adds an eigenmode source for each input waveguide -- can get a source's amplitude to 0 to turn it off
@@ -124,11 +131,11 @@ def create_monitor(r,dr,th,ysize=1):
     return flux
 
 def create_output_monitors():
-    output_monitors = [create_monitor(-r,-1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles,amplitudes)]
+    output_monitors = [create_monitor(-r,-1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles_input,amplitudes)]
     return output_monitors
 
 def create_input_monitors():
-    input_monitors = [create_monitor(r,1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles,amplitudes)]
+    input_monitors = [create_monitor(r,1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles_input,amplitudes)]
     return input_monitors
 
 def create_pdf_output(input_monitors, output_monitors, iteration):
@@ -216,14 +223,14 @@ def short_test_run(iteration):
         try:
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-            sim.run(mp.at_every(0.5, Animate), until=15)
+            sim.run(mp.at_every(0.5, Animate), until=1)
             filename = "Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
         except:
             print("Error occured in short_test_run()\n")
             print("     Issue with animation and mp4.\n")
-            sim.run(until=15)
+            sim.run(until=1)
            
 
 
@@ -287,8 +294,6 @@ if len(sys.argv) >= 4:
             r = int(sys.argv[4][4:])
         elif sys.argv[4][0:4] == "--n=":
             n = int(sys.argv[4][4:])
-
-            nguides_p = (n-1)/2;
         else:
             print("Arguments not reconized.")
             print()
@@ -316,7 +321,21 @@ print("First: ", first_iteration)
 print("Last:  ", last_iteration)
 print("Mode:  ", mode)
 print("Star Coupler Radius (um):       ", r)
-print("Number of waveguides per side:  ", (nguides_p*2)+1)
+print("Number of waveguides per side:  ", n)
+
+# Varibale Setup
+n_top = math.floor((n-1)/2)
+n_bot = math.ceil((n-1)/2)
+nangles_input = np.arange(-n_bot,n_top+1,1) 
+nangles_output = np.arange(-n_top,n_bot+1,1) 
+rot_angles_input = [np.arcsin(i*np.sqrt((1.55)/(r*len(nangles_input)*neff))) for i in nangles_input]
+rot_angles_output = [np.arcsin(i*np.sqrt((1.55)/(r*len(nangles_output)*neff))) for i in nangles_output]
+amplitudes = np.ones(len(nangles_input),dtype=complex) # amplitude/phase shift for each sources
+
+print("nangle_input: ", nangles_input)
+print("nangles_output: ", nangles_output)
+print("rot_angles_input: ", rot_angles_input)
+print("rot_angles_output: ", rot_angles_output)
 
 # MAIN LOOP
 for iteration in range(first_iteration,last_iteration+1):
