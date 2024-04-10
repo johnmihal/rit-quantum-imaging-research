@@ -243,10 +243,21 @@ def load_sim_from_dump(filename):
     return (sim, input_monitors, output_monitors)
 
 def error_msg_and_exit():
-    print("Usage: f l mode")
-    print("f = first iteration, inclusive, should be between 0 and 20")
-    print("l = last iteration inclusive, should be between 0 and 20")
-    print("mode = optional, t for test mode, v for long simulation with video, none or anything else for long simulation,")
+    print("Simple Star Coupler Meep Simulation: cmd line version")
+    print()
+    print("Usage:")
+    print("  Simple_Star_Coupler_SM_Experiment_eArgs <first> <last> (--sv|--lv|--l) [--r=<um>] [--n=<>]")
+    print()
+    print("Mandatory Values:")
+    print("  first  First waveguide to test, inclusive.")
+    print("  last   Last waveguide to test, inclusive.")
+    print("  --sv    Short test mode, with video.")
+    print("  --lv   Long simulation, with video. ")
+    print("  --l    Long simulation, no video.")
+    print()
+    print("Options:")
+    print("  --r=<um>  Star coupler radius (um) [default: 30].")
+    print("  --n=<>    Number of waveguides on each side [default: 21].")
     exit(0)
 
 def export_res_to_pickle(monitors, iteration, type):
@@ -257,29 +268,55 @@ def export_res_to_pickle(monitors, iteration, type):
         dbfile.close()
 
 # ARG PARSING
-first_iteration = 0
-last_iteration = 0
-test_mode = ""
-if len(sys.argv) == 3 or len(sys.argv) == 4:
+first = 0
+last = 0
+mode = ""
+n = 21
+if len(sys.argv) >= 4:
     first_iteration = int(sys.argv[1])
     last_iteration = int(sys.argv[2])
+    mode = sys.argv[3]
 
-    if first_iteration < 0 or first_iteration > 20:
-        print("f is out of bounds")
+    if mode != "--sv" and mode != "--lv" and mode != "--l":
+        print("Invalid mode.")
+        print()
         error_msg_and_exit()
 
-    if last_iteration < 0 or last_iteration > 20 or last_iteration < first_iteration:
-        print("l is out of bounds. l >= f must be true.")
+    if len(sys.argv) >= 5:
+        if sys.argv[4][0:4] == "--r=":
+            r = int(sys.argv[4][4:])
+        elif sys.argv[4][0:4] == "--n=":
+            n = int(sys.argv[4][4:])
+
+            nguides_p = (n-1)/2;
+        else:
+            print("Arguments not reconized.")
+            print()
+            error_msg_and_exit()
+
+    if r < 0 or n < 0:
+        print("Arguments r and n cannot be less than 0.")
+        print()
         error_msg_and_exit()
 
-    if len(sys.argv) == 4:
-        test_mode = sys.argv[3]
+    if first_iteration < last_iteration:
+        print("Last must be greater than first.")
+        print()
+        error_msg_and_exit()
+
+    if last_iteration > n:
+        print("Argument l is out of bounds, cannot be greater than n.")
+        error_msg_and_exit()
+
+
 else:
     error_msg_and_exit
 
-print("First Iteration: ", first_iteration)
-print("Last Iteration:", last_iteration)
-print("Test Mode: ", test_mode)
+print("First: ", first_iteration)
+print("Last:  ", last_iteration)
+print("Mode:  ", mode)
+print("Star Coupler Radius (um):       ", r)
+print("Number of waveguides per side:  ", (nguides_p*2)+1)
 
 # MAIN LOOP
 for iteration in range(first_iteration,last_iteration+1):
@@ -296,18 +333,18 @@ for iteration in range(first_iteration,last_iteration+1):
     output_monitors = create_output_monitors();
     sim.init_sim()
 
-    if test_mode == "t":
+    if mode == "--sv":
         short_test_run(iteration)
-    elif test_mode == "v":
+    elif mode == "--lv":
         run_and_make_video(iteration)
-    else:
+    elif mode == "--l":
         sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
         
     try:
         create_pdf_output(input_monitors, output_monitors, iteration)
     except:
         print("Error in create_pdf_output()\n")
-        
+
     sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
     export_res_to_pickle(input_monitors,iteration,"input")
