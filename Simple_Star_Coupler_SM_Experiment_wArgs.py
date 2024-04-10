@@ -5,6 +5,8 @@ import pandas as pd
 from matplotlib.backends.backend_pdf import PdfPages 
 import meep as mp
 import sys
+import pickle
+
 #from meep.materials import SiO2, Si
 # %matplotlib widget
 
@@ -188,7 +190,7 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
     plt.xlabel("Wave Guide Number")
     plt.ylabel("Flux")
 
-    p = PdfPages("Simple_Star_Coupler_SM_GRAPHS_" + str(iteration) + ".pdf")
+    p = PdfPages("Simple_Star_Coupler_SM_DATA_" + str(iteration)+ "/Simple_Star_Coupler_SM_GRAPHS_" + str(iteration) + ".pdf")
     figs = [fig1, fig2, fig3, fig4]
 
     fig1.set_title("Efficiency = " + (str)(100*(total_output/total_input)) + "%")
@@ -202,7 +204,7 @@ def run_and_make_video(iteration):
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
             sim.run(mp.at_every(0.5, Animate), until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
-            filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
+            filename = "Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
         except:
@@ -215,7 +217,7 @@ def short_test_run(iteration):
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
             sim.run(mp.at_every(0.5, Animate), until=15)
-            filename = "Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
+            filename = "Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
         except:
@@ -244,13 +246,20 @@ def error_msg_and_exit():
     print("Usage: f l mode")
     print("f = first iteration, inclusive, should be between 0 and 20")
     print("l = last iteration inclusive, should be between 0 and 20")
-    print("mode = optional, test for test mode, none for long simulation")
+    print("mode = optional, t for test mode, v for long simulation with video, none or anything else for long simulation,")
     exit(0)
+
+def export_res_to_pickle(monitors, iteration, type):
+    for i in range(len(monitors)):
+        dbfile = open("Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/itr_" + str(iteration) + "_"+ type +"_"+ str(i), 'ab')
+        res = sim.get_eigenmode_coefficients(monitors[i],bands=[1])
+        pickle.dump(res, dbfile)
+        dbfile.close()
 
 # ARG PARSING
 first_iteration = 0
 last_iteration = 0
-test_mode = False
+test_mode = ""
 if len(sys.argv) == 3 or len(sys.argv) == 4:
     first_iteration = int(sys.argv[1])
     last_iteration = int(sys.argv[2])
@@ -264,11 +273,7 @@ if len(sys.argv) == 3 or len(sys.argv) == 4:
         error_msg_and_exit()
 
     if len(sys.argv) == 4:
-        if sys.argv[3] == "test":
-            test_mode = True
-        else:
-            print("Invalid mode.")
-            error_msg_and_exit()
+        test_mode = sys.argv[3]
 else:
     error_msg_and_exit
 
@@ -291,16 +296,22 @@ for iteration in range(first_iteration,last_iteration+1):
     output_monitors = create_output_monitors();
     sim.init_sim()
 
-    if test_mode:
+    if test_mode == "t":
         short_test_run(iteration)
-    else:
+    elif test_mode == "v":
         run_and_make_video(iteration)
+    else:
+        sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
         
     try:
         create_pdf_output(input_monitors, output_monitors, iteration)
     except:
         print("Error in create_pdf_output()\n")
+        
     sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
+
+    export_res_to_pickle(input_monitors,iteration,"input")
+    export_res_to_pickle(output_monitors,iteration,"output")
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
     
