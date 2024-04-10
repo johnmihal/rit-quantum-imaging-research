@@ -131,7 +131,8 @@ def create_monitor(r,dr,th,ysize=1):
     return flux
 
 def create_output_monitors():
-    output_monitors = [create_monitor(-r,-1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles_input,amplitudes)]
+    output_monitors = [create_monitor(-r,-1,s,ysize=y_guide_size) for (s,a) in zip(rot_angles_input,amplitudes)] 
+    #rot_angles_input is used as this function flips it horizontally automatically
     return output_monitors
 
 def create_input_monitors():
