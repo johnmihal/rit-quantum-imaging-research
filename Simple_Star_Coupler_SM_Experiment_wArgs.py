@@ -316,7 +316,7 @@ if len(sys.argv) >= 4:
 
 
 else:
-    error_msg_and_exit
+    error_msg_and_exit()
 
 print(sys.argv)
 print("First: ", first_iteration)
