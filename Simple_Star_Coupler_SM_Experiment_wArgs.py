@@ -305,7 +305,7 @@ if len(sys.argv) >= 4:
         print()
         error_msg_and_exit()
 
-    if first_iteration < last_iteration:
+    if first_iteration > last_iteration:
         print("Last must be greater than first.")
         print()
         error_msg_and_exit()
