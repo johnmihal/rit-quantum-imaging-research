@@ -268,7 +268,7 @@ def error_msg_and_exit():
     print("  --n=<>    Number of waveguides on each side [default: 21].")
     exit(0)
 
-def export_res_to_pickle(monitors, iteration, type):
+def export_monitors_to_pickle(monitors, iteration, type):
     for i in range(len(monitors)):
         dbfile = open("Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/itr_" + str(iteration) + "_"+ type +"_"+ str(i), 'ab')
         res = sim.get_eigenmode_coefficients(monitors[i],bands=[1])
@@ -285,17 +285,38 @@ if len(sys.argv) >= 4:
     last_iteration = int(sys.argv[2])
     mode = sys.argv[3]
 
+    print(sys.argv)
+
     if mode != "--sv" and mode != "--lv" and mode != "--l":
         print("Invalid mode.")
         print()
         error_msg_and_exit()
 
     if len(sys.argv) >= 5:
+        good_arguments = False
+
         if sys.argv[4][0:4] == "--r=":
             r = int(sys.argv[4][4:])
-        elif sys.argv[4][0:4] == "--n=":
+            good_arguments = True
+        
+        
+
+        if sys.argv[4][0:4] == "--n=":
             n = int(sys.argv[4][4:])
-        else:
+            good_arguments = True
+        
+
+        if sys.argv[5][0:4] == "--n=":
+            n = int(sys.argv[5][4:])
+            good_arguments = True
+       
+
+        if sys.argv[5][0:4] == "--r=":
+            n = int(sys.argv[5][4:])
+            good_arguments = True
+
+
+        if good_arguments == False:
             print("Arguments not reconized.")
             print()
             error_msg_and_exit()
@@ -310,8 +331,8 @@ if len(sys.argv) >= 4:
         print()
         error_msg_and_exit()
 
-    if last_iteration > n:
-        print("Argument l is out of bounds, cannot be greater than n.")
+    if last_iteration >= n:
+        print("Argument l is out of bounds, cannot be greater or equal to n.")
         error_msg_and_exit()
 
 
@@ -368,8 +389,8 @@ for iteration in range(first_iteration,last_iteration+1):
 
     sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
-    export_res_to_pickle(input_monitors,iteration,"input")
-    export_res_to_pickle(output_monitors,iteration,"output")
+    export_monitors_to_pickle(input_monitors,iteration,"input")
+    export_monitors_to_pickle(output_monitors,iteration,"output")
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
     
