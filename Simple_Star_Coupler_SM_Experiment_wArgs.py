@@ -143,9 +143,17 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
     # MAKE GRAPHS AND PDF
     figure,axes = plt.subplots()
 
-    fig1 = sim.plot2D(ax=axes,output_plane=mp.Volume(center=mp.Vector3(), size=mp.Vector3(l,w,0)),
-                fields=mp.Ez,
-                field_parameters={'alpha':0.9})
+    sim.plot2D()
+    plt.show()
+    plt.savefig("PLOT.png")
+
+    # fig1 = sim.plot2D(ax=axes,output_plane=mp.Volume(center=mp.Vector3(), size=mp.Vector3(l,w,0)),
+    #             fields=mp.Ez,
+    #             field_parameters={'alpha':0.9})
+    
+    # fig1.show()
+    # fig1.savefig('PLOT.png')
+    exit(0)
 
     waveguides = []
     for i in range(len(input_monitors)):
@@ -160,9 +168,14 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
     for i in range(len(input_monitors)):
         input_flux.append(mp.get_fluxes(input_monitors[i])[0])
         total_input += mp.get_fluxes(input_monitors[i])[0]
+        print("ad input flux: ", mp.get_fluxes(input_monitors[i])[0])
+
 
         output_flux.append(mp.get_fluxes(output_monitors[i])[0])
         total_output += mp.get_fluxes(output_monitors[i])[0]
+
+    print("total input flux: ", total_input)
+    print("total output flux: ", total_output)
 
     # Make a data definition
     data_input = {'Input': input_flux}
@@ -201,7 +214,11 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
     p = PdfPages("Simple_Star_Coupler_SM_DATA_" + str(iteration)+ "/Simple_Star_Coupler_SM_GRAPHS_" + str(iteration) + ".pdf")
     figs = [fig1, fig2, fig3, fig4]
 
-    fig1.set_title("Efficiency = " + (str)(100*(total_output/total_input)) + "%")
+    if total_input != 0:
+        fig1.set_title("Efficiency = " + (str)(100*(total_output/total_input)) + "%")
+    else:
+        fig1.set_title("Efficiency = null, input = 0")
+
     for fig in figs:
         fig.figure.savefig(p, format='pdf')
 
@@ -224,10 +241,11 @@ def short_test_run(iteration):
         try:
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-            sim.run(mp.at_every(0.5, Animate), until=1)
+            sim.run(mp.at_every(0.1, Animate), until=10)
             filename = "Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
+            print("video created")
         except:
             print("Error occured in short_test_run()\n")
             print("     Issue with animation and mp4.\n")
@@ -254,7 +272,7 @@ def error_msg_and_exit():
     print("Simple Star Coupler Meep Simulation: cmd line version")
     print()
     print("Usage:")
-    print("  Simple_Star_Coupler_SM_Experiment_eArgs <first> <last> (--sv|--lv|--l) [--r=<um>] [--n=<>]")
+    print("  Simple_Star_Coupler_SM_Experiment_wArgs <first> <last> (--sv|--lv|--l) [--r=<um>] [--n=<>]")
     print()
     print("Mandatory Values:")
     print("  first  First waveguide to test, inclusive.")
@@ -382,15 +400,17 @@ for iteration in range(first_iteration,last_iteration+1):
     elif mode == "--l":
         sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
         
-    try:
-        create_pdf_output(input_monitors, output_monitors, iteration)
-    except:
-        print("Error in create_pdf_output()\n")
 
     sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
     export_monitors_to_pickle(input_monitors,iteration,"input")
     export_monitors_to_pickle(output_monitors,iteration,"output")
+
+    # try:
+    create_pdf_output(input_monitors, output_monitors, iteration)
+    # except:
+    #     print("Error in create_pdf_output()\n")
+
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
     

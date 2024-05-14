@@ -13,6 +13,7 @@ def create_tranfer_matrix(data_folder):
     #store vars
     #perform devision to add to matrix
 
+    # this uses walk to get a list of folders and subdirectories
     f = []
     layer = 1
     w = walk(data_folder)
@@ -24,13 +25,17 @@ def create_tranfer_matrix(data_folder):
 
     print(f)
     print("hi")
+
+    #generate blank transfer matrix
     num_wg = len(f)
     transfer_matrix = np.zeros((num_wg,num_wg))
     print(transfer_matrix)
 
+    # empty arrays to store flux values
     flux_in = np.zeros(num_wg)
     flux_out = np.zeros(num_wg)
 
+    # go folder by folder (each folder is a a different waveguide being tested)
     for folder in f:
         print("x")
         files = glob.glob(data_folder+"/"+folder+"/itr*")
@@ -40,6 +45,8 @@ def create_tranfer_matrix(data_folder):
         print(iteration)
 
         # iteration = folder
+
+        #go through each mointor file in the folder and load the data
         for file in files:
             if file.find("input") != -1:
                 monitor = open(file, 'rb')
@@ -50,6 +57,7 @@ def create_tranfer_matrix(data_folder):
                 print("flux: ")
                 print(abs(data.alpha[0,0,0])**2)
 
+                # this gets the flux we want from the pickle
                 wg_num = int(file[file.rfind("_")+1:])
                 flux_in[wg_num] = abs(data.alpha[0,0,0])**2
 
@@ -63,6 +71,7 @@ def create_tranfer_matrix(data_folder):
                 print("flux: ")
                 print(abs(data.alpha[0,0,0])**2)
 
+                # this gets the flux we want from the pickle
                 wg_num = int(file[file.rfind("_")+1:])
                 flux_out[wg_num] = abs(data.alpha[0,0,0])**2
             else:
@@ -74,13 +83,17 @@ def create_tranfer_matrix(data_folder):
             print(flux_in)
             print(flux_out)
 
+            # add fluc data to transfer matric
             for wg in range(len(flux_out)):
                 transfer_matrix[iteration,wg] = flux_out[wg]/flux_in[iteration]
 
 
         # print(files)
 
+    print(transfer_matrix)
+    return transfer_matrix
 
 
+# this is used for testing
 if __name__ == '__main__':
     create_tranfer_matrix("SSC_n8_r35_data")

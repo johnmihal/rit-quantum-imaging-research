@@ -1,0 +1,1888 @@
+['Simple_Star_Coupler_SM_Experiment_wArgs.py', '0', '7', '--l', '--r=45', '--n=8']
+['Simple_Star_Coupler_SM_Experiment_wArgs.py', '0', '7', '--l', '--r=45', '--n=8']
+First:  0
+Last:   7
+Mode:   --l
+Star Coupler Radius (um):        45
+Number of waveguides per side:   8
+nangle_input:  [-4 -3 -2 -1  0  1  2  3]
+nangles_output:  [-3 -2 -1  0  1  2  3  4]
+rot_angles_input:  [-0.1688281071917212, -0.12635638981443373, -0.08411276401573482, -0.04201917219087048, 0.0, 0.04201917219087048, 0.08411276401573482, 0.12635638981443373]
+rot_angles_output:  [-0.12635638981443373, -0.08411276401573482, -0.04201917219087048, 0.0, 0.04201917219087048, 0.08411276401573482, 0.12635638981443373, 0.1688281071917212]
+Iteration:  0
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00128317 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.1395% done, 13.2949 s remaining
+subpixel-averaging is 46.5964% done, 4.5875 s remaining
+subpixel-averaging is 69.8862% done, 1.72376 s remaining
+subpixel-averaging is 93.5269% done, 0.276926 s remaining
+subpixel-averaging is 23.1896% done, 13.25 s remaining
+subpixel-averaging is 46.7133% done, 4.56455 s remaining
+subpixel-averaging is 70.0199% done, 1.71351 s remaining
+subpixel-averaging is 93.6773% done, 0.270072 s remaining
+subpixel-averaging is 23.3567% done, 13.1352 s remaining
+subpixel-averaging is 46.9305% done, 4.52411 s remaining
+subpixel-averaging is 70.0533% done, 1.71096 s remaining
+subpixel-averaging is 93.4434% done, 0.280676 s remaining
+time for set_epsilon = 64.9988 s
+-----------
+MPB solved for frequency_1(0.985782,0.168027,0) = 1 after 10 iters
+MPB solved for frequency_1(0.635989,0.108405,0) = 0.645161 after 1 iters
+on time step 152 (time=0.95), 0.0264374 s/step
+on time step 325 (time=2.03125), 0.0232302 s/step
+on time step 499 (time=3.11875), 0.0230738 s/step
+on time step 679 (time=4.24375), 0.0222658 s/step
+on time step 856 (time=5.35), 0.022777 s/step
+on time step 1032 (time=6.45), 0.0227525 s/step
+on time step 1201 (time=7.50625), 0.0237203 s/step
+on time step 1375 (time=8.59375), 0.0231027 s/step
+on time step 1553 (time=9.70625), 0.0224982 s/step
+on time step 1720 (time=10.75), 0.0239651 s/step
+on time step 1890 (time=11.8125), 0.0236318 s/step
+on time step 2062 (time=12.8875), 0.0233055 s/step
+on time step 2214 (time=13.8375), 0.0263892 s/step
+on time step 2360 (time=14.75), 0.0274963 s/step
+on time step 2507 (time=15.6688), 0.0272566 s/step
+on time step 2685 (time=16.7812), 0.0224891 s/step
+on time step 2863 (time=17.8938), 0.0225548 s/step
+on time step 3037 (time=18.9812), 0.0229894 s/step
+on time step 3214 (time=20.0875), 0.0226305 s/step
+on time step 3386 (time=21.1625), 0.0232663 s/step
+on time step 3560 (time=22.25), 0.0230389 s/step
+on time step 3734 (time=23.3375), 0.0231116 s/step
+on time step 3909 (time=24.4313), 0.0228705 s/step
+on time step 4087 (time=25.5438), 0.0225817 s/step
+on time step 4268 (time=26.675), 0.0221468 s/step
+on time step 4441 (time=27.7563), 0.023198 s/step
+on time step 4620 (time=28.875), 0.0224504 s/step
+on time step 4797 (time=29.9813), 0.0226889 s/step
+on time step 4979 (time=31.1188), 0.0220186 s/step
+on time step 5162 (time=32.2625), 0.021947 s/step
+on time step 5330 (time=33.3125), 0.0238638 s/step
+on time step 5513 (time=34.4563), 0.0219267 s/step
+on time step 5696 (time=35.6), 0.0218698 s/step
+on time step 5879 (time=36.7437), 0.0218748 s/step
+on time step 6062 (time=37.8875), 0.0218804 s/step
+on time step 6237 (time=38.9813), 0.0228642 s/step
+on time step 6419 (time=40.1188), 0.0220426 s/step
+on time step 6603 (time=41.2688), 0.0218106 s/step
+on time step 6786 (time=42.4125), 0.0219482 s/step
+on time step 6970 (time=43.5625), 0.0218472 s/step
+on time step 7153 (time=44.7063), 0.0218779 s/step
+on time step 7336 (time=45.85), 0.0219273 s/step
+on time step 7505 (time=46.9062), 0.0237312 s/step
+on time step 7683 (time=48.0188), 0.0225577 s/step
+on time step 7865 (time=49.1562), 0.0220732 s/step
+on time step 8039 (time=50.2438), 0.023091 s/step
+on time step 8219 (time=51.3688), 0.022326 s/step
+on time step 8388 (time=52.425), 0.0237268 s/step
+on time step 8560 (time=53.5), 0.0232739 s/step
+on time step 8742 (time=54.6375), 0.022086 s/step
+on time step 8926 (time=55.7875), 0.0217919 s/step
+on time step 9104 (time=56.9), 0.0225776 s/step
+on time step 9286 (time=58.0375), 0.0220069 s/step
+on time step 9468 (time=59.175), 0.0219912 s/step
+on time step 9650 (time=60.3125), 0.0220925 s/step
+on time step 9827 (time=61.4188), 0.0226864 s/step
+on time step 10006 (time=62.5375), 0.0224707 s/step
+on time step 10186 (time=63.6625), 0.022279 s/step
+on time step 10367 (time=64.7938), 0.0221701 s/step
+on time step 10548 (time=65.925), 0.0221742 s/step
+on time step 10728 (time=67.05), 0.0222756 s/step
+on time step 10895 (time=68.0938), 0.0239712 s/step
+on time step 11066 (time=69.1625), 0.0234546 s/step
+on time step 11235 (time=70.2188), 0.0237023 s/step
+on time step 11405 (time=71.2812), 0.0236079 s/step
+on time step 11586 (time=72.4125), 0.0221543 s/step
+on time step 11768 (time=73.55), 0.0219948 s/step
+on time step 11950 (time=74.6875), 0.0220676 s/step
+on time step 12131 (time=75.8188), 0.0221437 s/step
+on time step 12312 (time=76.95), 0.0221709 s/step
+on time step 12488 (time=78.05), 0.0228027 s/step
+on time step 12668 (time=79.175), 0.0223389 s/step
+on time step 12848 (time=80.3), 0.0223082 s/step
+on time step 13032 (time=81.45), 0.0218557 s/step
+on time step 13212 (time=82.575), 0.0223149 s/step
+on time step 13394 (time=83.7125), 0.0220791 s/step
+on time step 13567 (time=84.7938), 0.0231463 s/step
+on time step 13738 (time=85.8625), 0.0234404 s/step
+on time step 13913 (time=86.9563), 0.0229292 s/step
+on time step 14093 (time=88.0813), 0.0222522 s/step
+on time step 14273 (time=89.2063), 0.0223143 s/step
+on time step 14454 (time=90.3375), 0.0222001 s/step
+on time step 14634 (time=91.4625), 0.0222954 s/step
+on time step 14817 (time=92.6063), 0.0219716 s/step
+on time step 14989 (time=93.6813), 0.0233538 s/step
+on time step 15168 (time=94.8), 0.0223702 s/step
+on time step 15347 (time=95.9188), 0.0224133 s/step
+on time step 15527 (time=97.0438), 0.0223132 s/step
+on time step 15707 (time=98.1688), 0.0223219 s/step
+on time step 15886 (time=99.2875), 0.0223961 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_0/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_0/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  1
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00125384 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.1228% done, 13.3015 s remaining
+subpixel-averaging is 46.5797% done, 4.5892 s remaining
+subpixel-averaging is 69.7192% done, 1.73809 s remaining
+subpixel-averaging is 93.2429% done, 0.290045 s remaining
+subpixel-averaging is 23.1729% done, 13.2673 s remaining
+subpixel-averaging is 46.5128% done, 4.60243 s remaining
+subpixel-averaging is 69.7359% done, 1.73642 s remaining
+subpixel-averaging is 93.293% done, 0.287709 s remaining
+subpixel-averaging is 23.2898% done, 13.183 s remaining
+subpixel-averaging is 46.7802% done, 4.55081 s remaining
+subpixel-averaging is 70.0366% done, 1.712 s remaining
+subpixel-averaging is 93.6105% done, 0.273031 s remaining
+time for set_epsilon = 65.1537 s
+-----------
+MPB solved for frequency_1(0.992028,0.12602,0) = 1 after 10 iters
+MPB solved for frequency_1(0.640018,0.0813035,0) = 0.645161 after 1 iters
+on time step 159 (time=0.99375), 0.0251761 s/step
+on time step 339 (time=2.11875), 0.0223376 s/step
+on time step 518 (time=3.2375), 0.022391 s/step
+on time step 698 (time=4.3625), 0.0222958 s/step
+on time step 877 (time=5.48125), 0.0223858 s/step
+on time step 1054 (time=6.5875), 0.0226889 s/step
+on time step 1222 (time=7.6375), 0.0238138 s/step
+on time step 1401 (time=8.75625), 0.022428 s/step
+on time step 1569 (time=9.80625), 0.0238655 s/step
+on time step 1743 (time=10.8938), 0.023017 s/step
+on time step 1912 (time=11.95), 0.0238191 s/step
+on time step 2087 (time=13.0438), 0.0229073 s/step
+on time step 2257 (time=14.1063), 0.0235413 s/step
+on time step 2438 (time=15.2375), 0.0222203 s/step
+on time step 2616 (time=16.35), 0.0224967 s/step
+on time step 2787 (time=17.4187), 0.0234859 s/step
+on time step 2958 (time=18.4875), 0.0234964 s/step
+on time step 3136 (time=19.6), 0.0225308 s/step
+on time step 3307 (time=20.6688), 0.0234005 s/step
+on time step 3487 (time=21.7938), 0.0223403 s/step
+on time step 3666 (time=22.9125), 0.0223572 s/step
+on time step 3845 (time=24.0312), 0.0223487 s/step
+on time step 4025 (time=25.1562), 0.0223378 s/step
+on time step 4202 (time=26.2625), 0.0227128 s/step
+on time step 4380 (time=27.375), 0.0224749 s/step
+on time step 4558 (time=28.4875), 0.0225359 s/step
+on time step 4737 (time=29.6063), 0.0224387 s/step
+on time step 4907 (time=30.6688), 0.0236603 s/step
+on time step 5086 (time=31.7875), 0.0224266 s/step
+on time step 5266 (time=32.9125), 0.0222788 s/step
+on time step 5439 (time=33.9937), 0.0231759 s/step
+on time step 5616 (time=35.1), 0.022641 s/step
+on time step 5793 (time=36.2063), 0.0226707 s/step
+on time step 5972 (time=37.325), 0.0224295 s/step
+on time step 6151 (time=38.4438), 0.0224073 s/step
+on time step 6327 (time=39.5438), 0.0227652 s/step
+on time step 6505 (time=40.6562), 0.0225283 s/step
+on time step 6682 (time=41.7625), 0.0226208 s/step
+on time step 6858 (time=42.8625), 0.0227286 s/step
+on time step 7037 (time=43.9813), 0.0223958 s/step
+on time step 7215 (time=45.0938), 0.0225237 s/step
+on time step 7395 (time=46.2188), 0.0223183 s/step
+on time step 7574 (time=47.3375), 0.0224564 s/step
+on time step 7750 (time=48.4375), 0.022767 s/step
+on time step 7927 (time=49.5438), 0.0226229 s/step
+on time step 8093 (time=50.5813), 0.0241707 s/step
+on time step 8264 (time=51.65), 0.0235176 s/step
+on time step 8441 (time=52.7563), 0.0226554 s/step
+on time step 8619 (time=53.8688), 0.0225168 s/step
+on time step 8795 (time=54.9688), 0.0228675 s/step
+on time step 8959 (time=55.9938), 0.0244321 s/step
+on time step 9125 (time=57.0312), 0.0241633 s/step
+on time step 9295 (time=58.0938), 0.0235388 s/step
+on time step 9467 (time=59.1688), 0.0232678 s/step
+on time step 9645 (time=60.2812), 0.0224976 s/step
+on time step 9823 (time=61.3938), 0.0225703 s/step
+on time step 9998 (time=62.4875), 0.0229143 s/step
+on time step 10168 (time=63.55), 0.0236266 s/step
+on time step 10336 (time=64.6), 0.0238427 s/step
+on time step 10511 (time=65.6938), 0.0228859 s/step
+on time step 10686 (time=66.7875), 0.0229233 s/step
+on time step 10860 (time=67.875), 0.0230097 s/step
+on time step 11029 (time=68.9313), 0.0238007 s/step
+on time step 11197 (time=69.9813), 0.0239389 s/step
+on time step 11364 (time=71.025), 0.0239605 s/step
+on time step 11537 (time=72.1063), 0.023251 s/step
+on time step 11711 (time=73.1938), 0.0230347 s/step
+on time step 11886 (time=74.2875), 0.0228804 s/step
+on time step 12058 (time=75.3625), 0.0233799 s/step
+on time step 12205 (time=76.2812), 0.0272976 s/step
+on time step 12375 (time=77.3438), 0.0236541 s/step
+on time step 12458 (time=77.8625), 0.168648 s/step
+on time step 12617 (time=78.8563), 0.0252285 s/step
+on time step 12760 (time=79.75), 0.0280642 s/step
+on time step 12777 (time=79.8563), 0.377282 s/step
+on time step 12914 (time=80.7125), 0.0292169 s/step
+on time step 13075 (time=81.7188), 0.0249548 s/step
+on time step 13254 (time=82.8375), 0.0223894 s/step
+on time step 13318 (time=83.2375), 1.01374 s/step
+on time step 13490 (time=84.3125), 0.0233878 s/step
+on time step 13633 (time=85.2063), 0.0284695 s/step
+on time step 13675 (time=85.4688), 0.0952655 s/step
+on time step 13687 (time=85.5438), 69.3488 s/step
+on time step 13856 (time=86.6), 0.0236975 s/step
+on time step 14040 (time=87.75), 0.0217995 s/step
+on time step 14125 (time=88.2812), 0.0471785 s/step
+on time step 14309 (time=89.4313), 0.0217565 s/step
+on time step 14496 (time=90.6), 0.0214586 s/step
+on time step 14682 (time=91.7625), 0.0215148 s/step
+on time step 14806 (time=92.5375), 0.0323038 s/step
+on time step 14990 (time=93.6875), 0.021796 s/step
+on time step 15053 (time=94.0813), 0.143981 s/step
+on time step 15234 (time=95.2125), 0.022173 s/step
+on time step 15419 (time=96.3688), 0.0216615 s/step
+on time step 15604 (time=97.525), 0.0217014 s/step
+on time step 15670 (time=97.9375), 0.320255 s/step
+on time step 15851 (time=99.0688), 0.0222154 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_1/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_1/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  2
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00125909 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 22.8889% done, 13.4821 s remaining
+subpixel-averaging is 46.2455% done, 4.6521 s remaining
+subpixel-averaging is 69.5354% done, 1.75364 s remaining
+subpixel-averaging is 93.2429% done, 0.289887 s remaining
+subpixel-averaging is 0.668272% done, 19515 s remaining
+subpixel-averaging is 24.1586% done, 12.5589 s remaining
+subpixel-averaging is 48.1502% done, 4.30767 s remaining
+subpixel-averaging is 71.7407% done, 1.57606 s remaining
+subpixel-averaging is 92.9422% done, 75.0486 s remaining
+subpixel-averaging is 50.6003% done, 237.351 s remaining
+subpixel-averaging is 23.8412% done, 12.7822 s remaining
+subpixel-averaging is 47.8661% done, 4.3573 s remaining
+subpixel-averaging is 71.7073% done, 1.57898 s remaining
+subpixel-averaging is 77.087% done, 3.68368 s remaining
+time for set_epsilon = 1434.38 s
+-----------
+MPB solved for frequency_1(0.996465,0.0840136,0) = 1 after 10 iters
+MPB solved for frequency_1(0.64288,0.0542023,0) = 0.645161 after 1 iters
+on time step 145 (time=0.90625), 1.62767 s/step
+on time step 331 (time=2.06875), 0.0215608 s/step
+on time step 522 (time=3.2625), 0.0209895 s/step
+on time step 712 (time=4.45), 0.0210639 s/step
+on time step 903 (time=5.64375), 0.0209687 s/step
+on time step 1089 (time=6.80625), 0.0477002 s/step
+on time step 1275 (time=7.96875), 0.0216079 s/step
+on time step 1436 (time=8.975), 0.0858253 s/step
+on time step 1623 (time=10.1438), 0.021408 s/step
+on time step 1785 (time=11.1562), 0.137013 s/step
+on time step 1969 (time=12.3063), 0.021812 s/step
+on time step 2157 (time=13.4813), 0.0213133 s/step
+on time step 2347 (time=14.6688), 0.0211617 s/step
+on time step 2418 (time=15.1125), 0.297978 s/step
+on time step 2603 (time=16.2688), 0.021647 s/step
+on time step 2758 (time=17.2375), 1.12888 s/step
+on time step 2942 (time=18.3875), 0.0217943 s/step
+on time step 3131 (time=19.5688), 0.0211899 s/step
+on time step 3320 (time=20.75), 0.0212723 s/step
+on time step 3393 (time=21.2063), 2.34926 s/step
+on time step 3578 (time=22.3625), 0.0216454 s/step
+on time step 3768 (time=23.55), 0.021079 s/step
+on time step 3958 (time=24.7375), 0.0210609 s/step
+on time step 4023 (time=25.1438), 0.0977155 s/step
+on time step 4209 (time=26.3063), 0.021553 s/step
+on time step 4399 (time=27.4938), 0.0210678 s/step
+on time step 4588 (time=28.675), 0.0212481 s/step
+on time step 4654 (time=29.0875), 0.0967956 s/step
+on time step 4839 (time=30.2438), 0.0216315 s/step
+on time step 4997 (time=31.2313), 3.30083 s/step
+on time step 5182 (time=32.3875), 0.0216745 s/step
+on time step 5373 (time=33.5813), 0.0209963 s/step
+on time step 5564 (time=34.775), 0.0210149 s/step
+on time step 5754 (time=35.9625), 0.021136 s/step
+on time step 5893 (time=36.8313), 0.0768101 s/step
+on time step 6081 (time=38.0063), 0.0213739 s/step
+on time step 6240 (time=39), 2.43037 s/step
+on time step 6425 (time=40.1562), 0.0216749 s/step
+on time step 6615 (time=41.3438), 0.0210585 s/step
+on time step 6800 (time=42.5), 0.0216373 s/step
+on time step 6987 (time=43.6688), 0.0214741 s/step
+on time step 7176 (time=44.85), 0.0212304 s/step
+on time step 7263 (time=45.3938), 0.0461887 s/step
+on time step 7449 (time=46.5563), 0.021526 s/step
+on time step 7559 (time=47.2438), 0.359348 s/step
+on time step 7736 (time=48.35), 0.022718 s/step
+on time step 7925 (time=49.5312), 0.0212419 s/step
+on time step 8107 (time=50.6688), 0.0220665 s/step
+on time step 8294 (time=51.8375), 0.0214964 s/step
+on time step 8482 (time=53.0125), 0.0213632 s/step
+on time step 8505 (time=53.1562), 1.11756 s/step
+on time step 8692 (time=54.325), 0.0214999 s/step
+on time step 8827 (time=55.1688), 0.0444879 s/step
+on time step 9013 (time=56.3313), 0.0215708 s/step
+on time step 9172 (time=57.325), 4.84546 s/step
+on time step 9354 (time=58.4625), 0.0220115 s/step
+on time step 9524 (time=59.525), 0.0235975 s/step
+on time step 9695 (time=60.5938), 0.0235485 s/step
+on time step 9881 (time=61.7563), 0.0215735 s/step
+on time step 10047 (time=62.7938), 0.833366 s/step
+on time step 10232 (time=63.95), 0.0216684 s/step
+on time step 10414 (time=65.0875), 0.0220137 s/step
+on time step 10599 (time=66.2438), 0.0216803 s/step
+on time step 10787 (time=67.4188), 0.0213382 s/step
+on time step 10976 (time=68.6), 0.0211915 s/step
+on time step 11166 (time=69.7875), 0.0211298 s/step
+on time step 11355 (time=70.9688), 0.0211903 s/step
+on time step 11414 (time=71.3375), 1.54596 s/step
+on time step 11599 (time=72.4938), 0.0216676 s/step
+on time step 11778 (time=73.6125), 0.0223766 s/step
+on time step 11963 (time=74.7687), 0.0216787 s/step
+on time step 12154 (time=75.9625), 0.0209961 s/step
+on time step 12343 (time=77.1438), 0.0212028 s/step
+on time step 12532 (time=78.325), 0.021211 s/step
+on time step 12680 (time=79.25), 0.489003 s/step
+on time step 12866 (time=80.4125), 0.0215955 s/step
+on time step 13055 (time=81.5938), 0.0211941 s/step
+on time step 13239 (time=82.7438), 0.0218249 s/step
+on time step 13427 (time=83.9188), 0.0213003 s/step
+on time step 13612 (time=85.075), 0.0216308 s/step
+on time step 13802 (time=86.2625), 0.0210884 s/step
+on time step 13972 (time=87.325), 0.17082 s/step
+on time step 14156 (time=88.475), 0.0217787 s/step
+on time step 14335 (time=89.5938), 0.0223528 s/step
+on time step 14520 (time=90.75), 0.0216838 s/step
+on time step 14706 (time=91.9125), 0.0215805 s/step
+on time step 14895 (time=93.0938), 0.0212212 s/step
+on time step 15084 (time=94.275), 0.0212007 s/step
+on time step 15099 (time=94.3688), 2.78966 s/step
+on time step 15284 (time=95.525), 0.0217368 s/step
+on time step 15466 (time=96.6625), 0.0220321 s/step
+on time step 15649 (time=97.8063), 0.021875 s/step
+on time step 15837 (time=98.9813), 0.0213277 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_2/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_2/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  3
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00120401 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.3232% done, 13.1531 s remaining
+subpixel-averaging is 45.0927% done, 23.4267 s remaining
+subpixel-averaging is 68.5497% done, 1.83609 s remaining
+subpixel-averaging is 92.5245% done, 0.323263 s remaining
+subpixel-averaging is 23.8078% done, 12.8038 s remaining
+subpixel-averaging is 40.682% done, 16.8862 s remaining
+subpixel-averaging is 63.8716% done, 2.26284 s remaining
+subpixel-averaging is 88.0303% done, 0.544247 s remaining
+subpixel-averaging is 23.5237% done, 13.0058 s remaining
+subpixel-averaging is 32.011% done, 34.9985 s remaining
+subpixel-averaging is 55.3844% done, 3.2244 s remaining
+subpixel-averaging is 79.3759% done, 1.03935 s remaining
+time for set_epsilon = 103.499 s
+-----------
+MPB solved for frequency_1(0.999117,0.0420068,0) = 1 after 10 iters
+MPB solved for frequency_1(0.644592,0.0271012,0) = 0.645161 after 1 iters
+on time step 172 (time=1.075), 0.0233469 s/step
+on time step 345 (time=2.15625), 3.03172 s/step
+on time step 527 (time=3.29375), 0.0219965 s/step
+on time step 717 (time=4.48125), 0.0211526 s/step
+on time step 907 (time=5.66875), 0.0211085 s/step
+on time step 1095 (time=6.84375), 0.0213287 s/step
+on time step 1219 (time=7.61875), 0.0323127 s/step
+on time step 1407 (time=8.79375), 0.021376 s/step
+on time step 1476 (time=9.225), 0.0929426 s/step
+on time step 1663 (time=10.3938), 0.0215018 s/step
+on time step 1817 (time=11.3563), 0.639574 s/step
+on time step 1995 (time=12.4688), 0.0225661 s/step
+on time step 2184 (time=13.65), 0.0211991 s/step
+on time step 2362 (time=14.7625), 0.0225596 s/step
+on time step 2551 (time=15.9438), 0.0211645 s/step
+on time step 2739 (time=17.1188), 0.0213905 s/step
+on time step 2923 (time=18.2688), 0.0218146 s/step
+on time step 3111 (time=19.4438), 0.0213513 s/step
+on time step 3209 (time=20.0563), 0.0434238 s/step
+on time step 3394 (time=21.2125), 0.0216713 s/step
+on time step 3547 (time=22.1688), 0.665371 s/step
+on time step 3730 (time=23.3125), 0.0219564 s/step
+on time step 3912 (time=24.45), 0.0220894 s/step
+on time step 4098 (time=25.6125), 0.0216002 s/step
+on time step 4282 (time=26.7625), 0.0217645 s/step
+on time step 4468 (time=27.925), 0.0215077 s/step
+on time step 4655 (time=29.0938), 0.0214949 s/step
+on time step 4783 (time=29.8938), 0.204457 s/step
+on time step 4966 (time=31.0375), 0.0218884 s/step
+on time step 5145 (time=32.1562), 0.0223706 s/step
+on time step 5328 (time=33.3), 0.0219382 s/step
+on time step 5516 (time=34.475), 0.0213648 s/step
+on time step 5704 (time=35.65), 0.0213766 s/step
+on time step 5892 (time=36.825), 0.0213018 s/step
+on time step 6019 (time=37.6187), 0.733804 s/step
+on time step 6204 (time=38.775), 0.0217099 s/step
+on time step 6386 (time=39.9125), 0.0220811 s/step
+on time step 6569 (time=41.0563), 0.0218785 s/step
+on time step 6669 (time=41.6813), 0.111868 s/step
+on time step 6853 (time=42.8313), 0.021839 s/step
+on time step 7035 (time=43.9688), 0.0219815 s/step
+on time step 7218 (time=45.1125), 0.0219081 s/step
+on time step 7404 (time=46.275), 0.0215177 s/step
+on time step 7592 (time=47.45), 0.0213052 s/step
+on time step 7697 (time=48.1063), 0.0986276 s/step
+on time step 7880 (time=49.25), 0.0219442 s/step
+on time step 8068 (time=50.425), 0.0213664 s/step
+on time step 8257 (time=51.6063), 0.0212709 s/step
+on time step 8411 (time=52.5688), 0.934168 s/step
+on time step 8595 (time=53.7188), 0.0217974 s/step
+on time step 8778 (time=54.8625), 0.0219409 s/step
+on time step 8963 (time=56.0188), 0.0216887 s/step
+on time step 9022 (time=56.3875), 0.460286 s/step
+on time step 9204 (time=57.525), 0.0220324 s/step
+on time step 9391 (time=58.6938), 0.0214619 s/step
+on time step 9581 (time=59.8813), 0.021114 s/step
+on time step 9770 (time=61.0625), 0.0211747 s/step
+on time step 9808 (time=61.3), 10.0234 s/step
+on time step 9991 (time=62.4438), 0.021938 s/step
+on time step 10171 (time=63.5688), 0.0223366 s/step
+on time step 10354 (time=64.7125), 0.021905 s/step
+on time step 10396 (time=64.975), 25.166 s/step
+on time step 10577 (time=66.1063), 0.0221841 s/step
+on time step 10629 (time=66.4313), 6.59913 s/step
+on time step 10774 (time=67.3375), 0.0276013 s/step
+on time step 10919 (time=68.2438), 0.0278706 s/step
+on time step 11070 (time=69.1875), 0.0266044 s/step
+on time step 11215 (time=70.0938), 0.0276174 s/step
+on time step 11380 (time=71.125), 0.024352 s/step
+on time step 11556 (time=72.225), 0.0227643 s/step
+on time step 11734 (time=73.3375), 0.0225076 s/step
+on time step 11913 (time=74.4562), 0.0223527 s/step
+on time step 12084 (time=75.525), 0.023409 s/step
+on time step 12239 (time=76.4938), 0.0259497 s/step
+on time step 12392 (time=77.45), 0.026156 s/step
+on time step 12559 (time=78.4938), 0.0240555 s/step
+on time step 12729 (time=79.5563), 0.0236703 s/step
+on time step 12883 (time=80.5188), 0.0261221 s/step
+on time step 13041 (time=81.5063), 0.0254409 s/step
+on time step 13194 (time=82.4625), 0.0261989 s/step
+on time step 13375 (time=83.5938), 0.0221871 s/step
+on time step 13552 (time=84.7), 0.022671 s/step
+on time step 13719 (time=85.7438), 0.0240978 s/step
+on time step 13889 (time=86.8063), 0.0235902 s/step
+on time step 14069 (time=87.9313), 0.0223465 s/step
+on time step 14244 (time=89.025), 0.0228676 s/step
+on time step 14418 (time=90.1125), 0.0230508 s/step
+on time step 14574 (time=91.0875), 0.0257202 s/step
+on time step 14727 (time=92.0438), 0.0262788 s/step
+on time step 14889 (time=93.0563), 0.0248205 s/step
+on time step 15066 (time=94.1625), 0.022621 s/step
+on time step 15239 (time=95.2438), 0.0231499 s/step
+on time step 15396 (time=96.225), 0.0255814 s/step
+on time step 15540 (time=97.125), 0.0277869 s/step
+on time step 15707 (time=98.1688), 0.0239586 s/step
+on time step 15886 (time=99.2875), 0.0224257 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_3/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_3/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  4
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00129604 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.0225% done, 13.3745 s remaining
+subpixel-averaging is 46.5296% done, 4.60004 s remaining
+subpixel-averaging is 69.6523% done, 1.74394 s remaining
+subpixel-averaging is 93.2763% done, 0.288502 s remaining
+subpixel-averaging is 23.223% done, 13.2287 s remaining
+subpixel-averaging is 46.7969% done, 4.54782 s remaining
+subpixel-averaging is 70.0366% done, 1.71235 s remaining
+subpixel-averaging is 93.6773% done, 0.270031 s remaining
+subpixel-averaging is 23.3567% done, 13.1339 s remaining
+subpixel-averaging is 47.0642% done, 4.50047 s remaining
+subpixel-averaging is 70.5545% done, 1.67018 s remaining
+subpixel-averaging is 94.262% done, 0.243636 s remaining
+time for set_epsilon = 64.8753 s
+-----------
+MPB solved for frequency_1(1,0,0) = 1 after 10 iters
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 1 iters
+on time step 163 (time=1.01875), 0.0246191 s/step
+on time step 342 (time=2.1375), 0.0223663 s/step
+on time step 520 (time=3.25), 0.0224898 s/step
+on time step 697 (time=4.35625), 0.0226914 s/step
+on time step 867 (time=5.41875), 0.0235511 s/step
+on time step 1039 (time=6.49375), 0.0232826 s/step
+on time step 1211 (time=7.56875), 0.0233195 s/step
+on time step 1390 (time=8.6875), 0.0223961 s/step
+on time step 1568 (time=9.8), 0.0225732 s/step
+on time step 1743 (time=10.8938), 0.0229319 s/step
+on time step 1920 (time=12), 0.0226995 s/step
+on time step 2094 (time=13.0875), 0.0230043 s/step
+on time step 2269 (time=14.1813), 0.0229624 s/step
+on time step 2445 (time=15.2812), 0.0228268 s/step
+on time step 2622 (time=16.3875), 0.0226865 s/step
+on time step 2797 (time=17.4812), 0.0229273 s/step
+on time step 2972 (time=18.575), 0.0228589 s/step
+on time step 3149 (time=19.6813), 0.0226974 s/step
+on time step 3327 (time=20.7938), 0.0225229 s/step
+on time step 3504 (time=21.9), 0.0226044 s/step
+on time step 3678 (time=22.9875), 0.023078 s/step
+on time step 3850 (time=24.0625), 0.0232661 s/step
+on time step 4012 (time=25.075), 0.0247076 s/step
+on time step 4186 (time=26.1625), 0.023057 s/step
+on time step 4349 (time=27.1813), 0.0246088 s/step
+on time step 4514 (time=28.2125), 0.0243923 s/step
+on time step 4692 (time=29.325), 0.0225899 s/step
+on time step 4855 (time=30.3438), 0.0245475 s/step
+on time step 5022 (time=31.3875), 0.0239546 s/step
+on time step 5175 (time=32.3438), 0.0262232 s/step
+on time step 5338 (time=33.3625), 0.0246972 s/step
+on time step 5508 (time=34.425), 0.0235482 s/step
+on time step 5687 (time=35.5438), 0.0224232 s/step
+on time step 5856 (time=36.6), 0.0236999 s/step
+on time step 6029 (time=37.6812), 0.023151 s/step
+on time step 6188 (time=38.675), 0.0252219 s/step
+on time step 6355 (time=39.7188), 0.0239639 s/step
+on time step 6522 (time=40.7625), 0.0240658 s/step
+on time step 6685 (time=41.7812), 0.0246901 s/step
+on time step 6854 (time=42.8375), 0.0237069 s/step
+on time step 7010 (time=43.8125), 0.0257362 s/step
+on time step 7163 (time=44.7688), 0.0262522 s/step
+on time step 7335 (time=45.8438), 0.0233545 s/step
+on time step 7513 (time=46.9563), 0.0225202 s/step
+on time step 7693 (time=48.0813), 0.0222695 s/step
+on time step 7865 (time=49.1562), 0.0233654 s/step
+on time step 8036 (time=50.225), 0.0234061 s/step
+on time step 8193 (time=51.2063), 0.025506 s/step
+on time step 8370 (time=52.3125), 0.0226354 s/step
+on time step 8536 (time=53.35), 0.0242271 s/step
+on time step 8709 (time=54.4313), 0.0232337 s/step
+on time step 8880 (time=55.5), 0.0233928 s/step
+on time step 9056 (time=56.6), 0.022852 s/step
+on time step 9229 (time=57.6813), 0.023258 s/step
+on time step 9408 (time=58.8), 0.0223591 s/step
+on time step 9580 (time=59.875), 0.0232694 s/step
+on time step 9734 (time=60.8375), 0.025987 s/step
+on time step 9906 (time=61.9125), 0.0233725 s/step
+on time step 10085 (time=63.0312), 0.0224522 s/step
+on time step 10265 (time=64.1562), 0.0222685 s/step
+on time step 10445 (time=65.2812), 0.0222788 s/step
+on time step 10626 (time=66.4125), 0.0221396 s/step
+on time step 10807 (time=67.5438), 0.0221948 s/step
+on time step 10986 (time=68.6625), 0.0223742 s/step
+on time step 11166 (time=69.7875), 0.0222932 s/step
+on time step 11341 (time=70.8813), 0.0228852 s/step
+on time step 11521 (time=72.0063), 0.0223116 s/step
+on time step 11701 (time=73.1313), 0.0223201 s/step
+on time step 11879 (time=74.2438), 0.022546 s/step
+on time step 12043 (time=75.2687), 0.0244438 s/step
+on time step 12220 (time=76.375), 0.0226816 s/step
+on time step 12388 (time=77.425), 0.0238953 s/step
+on time step 12558 (time=78.4875), 0.0236004 s/step
+on time step 12733 (time=79.5813), 0.02293 s/step
+on time step 12898 (time=80.6125), 0.0243012 s/step
+on time step 13075 (time=81.7188), 0.0226265 s/step
+on time step 13255 (time=82.8438), 0.0222731 s/step
+on time step 13434 (time=83.9625), 0.0223502 s/step
+on time step 13614 (time=85.0875), 0.0222407 s/step
+on time step 13793 (time=86.2063), 0.022372 s/step
+on time step 13968 (time=87.3), 0.0229112 s/step
+on time step 14147 (time=88.4188), 0.0223642 s/step
+on time step 14328 (time=89.55), 0.0221541 s/step
+on time step 14508 (time=90.675), 0.0222802 s/step
+on time step 14690 (time=91.8125), 0.0220552 s/step
+on time step 14872 (time=92.95), 0.0220942 s/step
+on time step 15052 (time=94.075), 0.0222279 s/step
+on time step 15231 (time=95.1938), 0.0223788 s/step
+on time step 15409 (time=96.3063), 0.0225278 s/step
+on time step 15590 (time=97.4375), 0.0221172 s/step
+on time step 15771 (time=98.5688), 0.0221598 s/step
+on time step 15950 (time=99.6875), 0.0223651 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_4/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_4/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  5
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.001261 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.0559% done, 13.3517 s remaining
+subpixel-averaging is 46.5296% done, 4.59866 s remaining
+subpixel-averaging is 69.7192% done, 1.73748 s remaining
+subpixel-averaging is 93.3431% done, 0.285452 s remaining
+subpixel-averaging is 23.2397% done, 13.2195 s remaining
+subpixel-averaging is 46.7467% done, 4.55905 s remaining
+subpixel-averaging is 70.0032% done, 1.71497 s remaining
+subpixel-averaging is 93.6606% done, 0.270839 s remaining
+subpixel-averaging is 23.2731% done, 13.1933 s remaining
+subpixel-averaging is 46.8637% done, 4.5356 s remaining
+subpixel-averaging is 70.2538% done, 1.6945 s remaining
+subpixel-averaging is 93.9279% done, 0.258687 s remaining
+time for set_epsilon = 64.9727 s
+-----------
+MPB solved for frequency_1(0.999117,-0.0420068,0) = 1 after 10 iters
+MPB solved for frequency_1(0.644592,-0.0271012,0) = 0.645161 after 1 iters
+on time step 161 (time=1.00625), 0.0248535 s/step
+on time step 343 (time=2.14375), 0.0219832 s/step
+on time step 525 (time=3.28125), 0.0220082 s/step
+on time step 707 (time=4.41875), 0.0219812 s/step
+on time step 889 (time=5.55625), 0.0220433 s/step
+on time step 1072 (time=6.7), 0.0219187 s/step
+on time step 1255 (time=7.84375), 0.0218662 s/step
+on time step 1438 (time=8.9875), 0.0219727 s/step
+on time step 1621 (time=10.1313), 0.0218662 s/step
+on time step 1803 (time=11.2688), 0.0219957 s/step
+on time step 1986 (time=12.4125), 0.0218733 s/step
+on time step 2169 (time=13.5563), 0.0219 s/step
+on time step 2351 (time=14.6938), 0.0219891 s/step
+on time step 2533 (time=15.8313), 0.0220524 s/step
+on time step 2715 (time=16.9688), 0.0220618 s/step
+on time step 2892 (time=18.075), 0.0226434 s/step
+on time step 3075 (time=19.2188), 0.021968 s/step
+on time step 3257 (time=20.3563), 0.0220219 s/step
+on time step 3440 (time=21.5), 0.0219098 s/step
+on time step 3623 (time=22.6438), 0.0219138 s/step
+on time step 3804 (time=23.775), 0.0221043 s/step
+on time step 3986 (time=24.9125), 0.0220744 s/step
+on time step 4167 (time=26.0438), 0.0221073 s/step
+on time step 4348 (time=27.175), 0.0221743 s/step
+on time step 4530 (time=28.3125), 0.0219939 s/step
+on time step 4712 (time=29.45), 0.0220416 s/step
+on time step 4895 (time=30.5938), 0.0218774 s/step
+on time step 5077 (time=31.7313), 0.0220884 s/step
+on time step 5258 (time=32.8625), 0.0221904 s/step
+on time step 5440 (time=34), 0.0220177 s/step
+on time step 5616 (time=35.1), 0.022762 s/step
+on time step 5798 (time=36.2375), 0.0220806 s/step
+on time step 5980 (time=37.375), 0.0220079 s/step
+on time step 6162 (time=38.5125), 0.0220563 s/step
+on time step 6345 (time=39.6562), 0.0219246 s/step
+on time step 6524 (time=40.775), 0.0223846 s/step
+on time step 6707 (time=41.9188), 0.0219206 s/step
+on time step 6890 (time=43.0625), 0.0219333 s/step
+on time step 7072 (time=44.2), 0.0220959 s/step
+on time step 7245 (time=45.2812), 0.0232431 s/step
+on time step 7426 (time=46.4125), 0.0221437 s/step
+on time step 7606 (time=47.5375), 0.0222845 s/step
+on time step 7787 (time=48.6688), 0.0221896 s/step
+on time step 7968 (time=49.8), 0.0221276 s/step
+on time step 8150 (time=50.9375), 0.0220099 s/step
+on time step 8326 (time=52.0375), 0.0227496 s/step
+on time step 8508 (time=53.175), 0.0220061 s/step
+on time step 8689 (time=54.3063), 0.0221632 s/step
+on time step 8870 (time=55.4375), 0.022139 s/step
+on time step 9051 (time=56.5688), 0.0221637 s/step
+on time step 9233 (time=57.7063), 0.022058 s/step
+on time step 9416 (time=58.85), 0.0219671 s/step
+on time step 9599 (time=59.9938), 0.0218872 s/step
+on time step 9781 (time=61.1313), 0.0219801 s/step
+on time step 9962 (time=62.2625), 0.0221003 s/step
+on time step 10141 (time=63.3813), 0.0224588 s/step
+on time step 10319 (time=64.4938), 0.0225271 s/step
+on time step 10498 (time=65.6125), 0.0223538 s/step
+on time step 10677 (time=66.7313), 0.022448 s/step
+on time step 10855 (time=67.8438), 0.0225609 s/step
+on time step 11026 (time=68.9125), 0.023513 s/step
+on time step 11178 (time=69.8625), 0.0264044 s/step
+on time step 11344 (time=70.9), 0.0241877 s/step
+on time step 11518 (time=71.9875), 0.0230569 s/step
+on time step 11691 (time=73.0688), 0.023251 s/step
+on time step 11869 (time=74.1813), 0.0224991 s/step
+on time step 12047 (time=75.2938), 0.0225375 s/step
+on time step 12217 (time=76.3563), 0.0235325 s/step
+on time step 12391 (time=77.4438), 0.0230767 s/step
+on time step 12564 (time=78.525), 0.0232112 s/step
+on time step 12738 (time=79.6125), 0.0229948 s/step
+on time step 12912 (time=80.7), 0.0230461 s/step
+on time step 13086 (time=81.7875), 0.0230206 s/step
+on time step 13261 (time=82.8813), 0.0229672 s/step
+on time step 13431 (time=83.9438), 0.023612 s/step
+on time step 13599 (time=84.9938), 0.0239355 s/step
+on time step 13770 (time=86.0625), 0.0234032 s/step
+on time step 13944 (time=87.15), 0.0230544 s/step
+on time step 14115 (time=88.2188), 0.0234039 s/step
+on time step 14287 (time=89.2938), 0.0232965 s/step
+on time step 14462 (time=90.3875), 0.0229717 s/step
+on time step 14636 (time=91.475), 0.0230758 s/step
+on time step 14810 (time=92.5625), 0.0230149 s/step
+on time step 14984 (time=93.65), 0.0230938 s/step
+on time step 15157 (time=94.7313), 0.0232066 s/step
+on time step 15332 (time=95.825), 0.0229835 s/step
+on time step 15508 (time=96.925), 0.0227916 s/step
+on time step 15682 (time=98.0125), 0.0230809 s/step
+on time step 15853 (time=99.0813), 0.0234 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_5/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_5/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  6
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00131679 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.2397% done, 13.2174 s remaining
+subpixel-averaging is 46.4961% done, 4.60468 s remaining
+subpixel-averaging is 69.3182% done, 1.77157 s remaining
+subpixel-averaging is 92.5245% done, 0.323235 s remaining
+subpixel-averaging is 23.2564% done, 13.2047 s remaining
+subpixel-averaging is 46.7969% done, 4.54771 s remaining
+subpixel-averaging is 70.1368% done, 1.70389 s remaining
+subpixel-averaging is 93.7942% done, 0.264773 s remaining
+subpixel-averaging is 23.3567% done, 13.1301 s remaining
+subpixel-averaging is 46.9639% done, 4.51955 s remaining
+subpixel-averaging is 70.3039% done, 1.69073 s remaining
+subpixel-averaging is 94.0281% done, 0.254133 s remaining
+time for set_epsilon = 65.0959 s
+-----------
+MPB solved for frequency_1(0.996465,-0.0840136,0) = 1 after 10 iters
+MPB solved for frequency_1(0.64288,-0.0542023,0) = 0.645161 after 1 iters
+on time step 159 (time=0.99375), 0.0251574 s/step
+on time step 335 (time=2.09375), 0.0228243 s/step
+on time step 510 (time=3.1875), 0.0229592 s/step
+on time step 686 (time=4.2875), 0.0228396 s/step
+on time step 862 (time=5.3875), 0.0228074 s/step
+on time step 1038 (time=6.4875), 0.022794 s/step
+on time step 1213 (time=7.58125), 0.0228591 s/step
+on time step 1388 (time=8.675), 0.0228848 s/step
+on time step 1563 (time=9.76875), 0.0228673 s/step
+on time step 1739 (time=10.8688), 0.0228268 s/step
+on time step 1914 (time=11.9625), 0.0228826 s/step
+on time step 2088 (time=13.05), 0.0230165 s/step
+on time step 2258 (time=14.1125), 0.0236491 s/step
+on time step 2430 (time=15.1875), 0.023296 s/step
+on time step 2601 (time=16.2563), 0.0234248 s/step
+on time step 2774 (time=17.3375), 0.0231859 s/step
+on time step 2947 (time=18.4187), 0.0231889 s/step
+on time step 3091 (time=19.3188), 0.0278784 s/step
+on time step 3256 (time=20.35), 0.0242944 s/step
+on time step 3427 (time=21.4188), 0.0234451 s/step
+on time step 3586 (time=22.4125), 0.0252633 s/step
+on time step 3739 (time=23.3688), 0.0263434 s/step
+on time step 3904 (time=24.4), 0.0242679 s/step
+on time step 4074 (time=25.4625), 0.0236846 s/step
+on time step 4243 (time=26.5188), 0.0238159 s/step
+on time step 4403 (time=27.5188), 0.0251276 s/step
+on time step 4570 (time=28.5625), 0.0240882 s/step
+on time step 4735 (time=29.5938), 0.0243534 s/step
+on time step 4901 (time=30.6313), 0.0241326 s/step
+on time step 5070 (time=31.6875), 0.0236891 s/step
+on time step 5240 (time=32.75), 0.0236341 s/step
+on time step 5410 (time=33.8125), 0.0235427 s/step
+on time step 5579 (time=34.8687), 0.0237826 s/step
+on time step 5749 (time=35.9312), 0.0235739 s/step
+on time step 5920 (time=37), 0.0234664 s/step
+on time step 6092 (time=38.075), 0.0233803 s/step
+on time step 6265 (time=39.1562), 0.0232381 s/step
+on time step 6440 (time=40.25), 0.0229871 s/step
+on time step 6612 (time=41.325), 0.0233597 s/step
+on time step 6784 (time=42.4), 0.0233299 s/step
+on time step 6948 (time=43.425), 0.024478 s/step
+on time step 7100 (time=44.375), 0.0264379 s/step
+on time step 7223 (time=45.1438), 0.0325681 s/step
+on time step 7371 (time=46.0688), 0.0271249 s/step
+on time step 7535 (time=47.0938), 0.0244465 s/step
+on time step 7698 (time=48.1125), 0.0246142 s/step
+on time step 7857 (time=49.1063), 0.0252212 s/step
+on time step 8025 (time=50.1562), 0.0238226 s/step
+on time step 8197 (time=51.2313), 0.0233862 s/step
+on time step 8357 (time=52.2313), 0.0252033 s/step
+on time step 8520 (time=53.25), 0.0245571 s/step
+on time step 8675 (time=54.2188), 0.0259319 s/step
+on time step 8839 (time=55.2438), 0.0245271 s/step
+on time step 9004 (time=56.275), 0.0242514 s/step
+on time step 9171 (time=57.3188), 0.0239702 s/step
+on time step 9341 (time=58.3813), 0.0236336 s/step
+on time step 9512 (time=59.45), 0.0234689 s/step
+on time step 9680 (time=60.5), 0.0239319 s/step
+on time step 9848 (time=61.55), 0.0238285 s/step
+on time step 10017 (time=62.6063), 0.0236805 s/step
+on time step 10188 (time=63.675), 0.0234896 s/step
+on time step 10360 (time=64.75), 0.0233127 s/step
+on time step 10530 (time=65.8125), 0.0236297 s/step
+on time step 10676 (time=66.725), 0.0274371 s/step
+on time step 10839 (time=67.7438), 0.0246772 s/step
+on time step 11012 (time=68.825), 0.0232065 s/step
+on time step 11186 (time=69.9125), 0.0230468 s/step
+on time step 11360 (time=71), 0.0229986 s/step
+on time step 11535 (time=72.0938), 0.0228621 s/step
+on time step 11711 (time=73.1938), 0.0227663 s/step
+on time step 11888 (time=74.3), 0.0227237 s/step
+on time step 12063 (time=75.3937), 0.022889 s/step
+on time step 12231 (time=76.4438), 0.0238266 s/step
+on time step 12406 (time=77.5375), 0.0228725 s/step
+on time step 12580 (time=78.625), 0.023003 s/step
+on time step 12758 (time=79.7375), 0.0225604 s/step
+on time step 12937 (time=80.8563), 0.0224073 s/step
+on time step 13102 (time=81.8875), 0.0243141 s/step
+on time step 13274 (time=82.9625), 0.0232772 s/step
+on time step 13450 (time=84.0625), 0.0228397 s/step
+on time step 13624 (time=85.15), 0.0230553 s/step
+on time step 13795 (time=86.2188), 0.0234823 s/step
+on time step 13972 (time=87.325), 0.0226174 s/step
+on time step 14151 (time=88.4438), 0.022468 s/step
+on time step 14329 (time=89.5563), 0.0225712 s/step
+on time step 14507 (time=90.6688), 0.022492 s/step
+on time step 14685 (time=91.7812), 0.022483 s/step
+on time step 14856 (time=92.85), 0.0234864 s/step
+on time step 15029 (time=93.9313), 0.0231773 s/step
+on time step 15204 (time=95.025), 0.0229752 s/step
+on time step 15380 (time=96.125), 0.0227748 s/step
+on time step 15557 (time=97.2313), 0.0227113 s/step
+on time step 15733 (time=98.3313), 0.0227779 s/step
+on time step 15908 (time=99.425), 0.0229804 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_6/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_6/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+Iteration:  7
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.0012691 s
+Working in 2D dimensions.
+Computational cell is 40 x 30 x 0 with resolution 80
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+subpixel-averaging is 23.2063% done, 13.241 s remaining
+subpixel-averaging is 46.7969% done, 4.54795 s remaining
+subpixel-averaging is 69.9029% done, 1.72315 s remaining
+subpixel-averaging is 93.4935% done, 0.27859 s remaining
+subpixel-averaging is 23.2731% done, 13.1939 s remaining
+subpixel-averaging is 46.9138% done, 4.52918 s remaining
+subpixel-averaging is 70.2872% done, 1.69159 s remaining
+subpixel-averaging is 93.9947% done, 0.255583 s remaining
+subpixel-averaging is 23.3567% done, 13.1307 s remaining
+subpixel-averaging is 46.9639% done, 4.51899 s remaining
+subpixel-averaging is 70.354% done, 1.68573 s remaining
+subpixel-averaging is 94.1117% done, 0.2504 s remaining
+time for set_epsilon = 64.776 s
+-----------
+MPB solved for frequency_1(0.992028,-0.12602,0) = 1 after 10 iters
+MPB solved for frequency_1(0.640018,-0.0813035,0) = 0.645161 after 1 iters
+on time step 165 (time=1.03125), 0.0243294 s/step
+on time step 347 (time=2.16875), 0.0220868 s/step
+on time step 529 (time=3.30625), 0.0220807 s/step
+on time step 711 (time=4.44375), 0.0220592 s/step
+on time step 891 (time=5.56875), 0.0222712 s/step
+on time step 1067 (time=6.66875), 0.0228404 s/step
+on time step 1240 (time=7.75), 0.0232035 s/step
+on time step 1400 (time=8.75), 0.0250767 s/step
+on time step 1566 (time=9.7875), 0.0241423 s/step
+on time step 1731 (time=10.8188), 0.0242656 s/step
+on time step 1905 (time=11.9062), 0.0231013 s/step
+on time step 2080 (time=13), 0.0229895 s/step
+on time step 2253 (time=14.0813), 0.0232167 s/step
+on time step 2419 (time=15.1188), 0.0241184 s/step
+on time step 2586 (time=16.1625), 0.0240418 s/step
+on time step 2754 (time=17.2125), 0.0238312 s/step
+on time step 2919 (time=18.2438), 0.0243242 s/step
+on time step 3087 (time=19.2938), 0.0238153 s/step
+on time step 3258 (time=20.3625), 0.0235012 s/step
+on time step 3428 (time=21.425), 0.0235849 s/step
+on time step 3593 (time=22.4563), 0.0242662 s/step
+on time step 3763 (time=23.5188), 0.0236651 s/step
+on time step 3933 (time=24.5813), 0.0235673 s/step
+on time step 4104 (time=25.65), 0.0235059 s/step
+on time step 4275 (time=26.7188), 0.0233993 s/step
+on time step 4445 (time=27.7812), 0.0236685 s/step
+on time step 4602 (time=28.7625), 0.0254872 s/step
+on time step 4756 (time=29.725), 0.0260926 s/step
+on time step 4924 (time=30.775), 0.0239284 s/step
+on time step 5082 (time=31.7625), 0.0253405 s/step
+on time step 5244 (time=32.775), 0.0247008 s/step
+on time step 5399 (time=33.7437), 0.0259626 s/step
+on time step 5571 (time=34.8188), 0.0232725 s/step
+on time step 5747 (time=35.9188), 0.022766 s/step
+on time step 5905 (time=36.9062), 0.0253472 s/step
+on time step 6057 (time=37.8563), 0.0263507 s/step
+on time step 6215 (time=38.8438), 0.0253417 s/step
+on time step 6372 (time=39.825), 0.0255459 s/step
+on time step 6528 (time=40.8), 0.025781 s/step
+on time step 6690 (time=41.8125), 0.0247974 s/step
+on time step 6847 (time=42.7938), 0.0255133 s/step
+on time step 6971 (time=43.5688), 0.032867 s/step
+on time step 7106 (time=44.4125), 0.0298075 s/step
+on time step 7269 (time=45.4313), 0.0245639 s/step
+on time step 7438 (time=46.4875), 0.0237415 s/step
+on time step 7610 (time=47.5625), 0.0232887 s/step
+on time step 7781 (time=48.6313), 0.0234873 s/step
+on time step 7957 (time=49.7313), 0.0227741 s/step
+on time step 8137 (time=50.8563), 0.0222913 s/step
+on time step 8307 (time=51.9188), 0.0236422 s/step
+on time step 8471 (time=52.9438), 0.0244381 s/step
+on time step 8645 (time=54.0312), 0.0230031 s/step
+on time step 8818 (time=55.1125), 0.0232421 s/step
+on time step 8994 (time=56.2125), 0.0227794 s/step
+on time step 9169 (time=57.3063), 0.0229654 s/step
+on time step 9341 (time=58.3813), 0.0232891 s/step
+on time step 9514 (time=59.4625), 0.0231493 s/step
+on time step 9677 (time=60.4813), 0.0246325 s/step
+on time step 9847 (time=61.5438), 0.0235826 s/step
+on time step 10018 (time=62.6125), 0.0234416 s/step
+on time step 10191 (time=63.6938), 0.0232075 s/step
+on time step 10367 (time=64.7938), 0.0227899 s/step
+on time step 10540 (time=65.875), 0.0232067 s/step
+on time step 10696 (time=66.85), 0.0257071 s/step
+on time step 10857 (time=67.8563), 0.0249286 s/step
+on time step 11013 (time=68.8312), 0.0257405 s/step
+on time step 11183 (time=69.8937), 0.023575 s/step
+on time step 11350 (time=70.9375), 0.0239835 s/step
+on time step 11515 (time=71.9688), 0.0243457 s/step
+on time step 11684 (time=73.025), 0.0237082 s/step
+on time step 11847 (time=74.0438), 0.0245832 s/step
+on time step 12011 (time=75.0688), 0.0245327 s/step
+on time step 12178 (time=76.1125), 0.0240798 s/step
+on time step 12343 (time=77.1438), 0.024351 s/step
+on time step 12521 (time=78.2563), 0.0225693 s/step
+on time step 12693 (time=79.3313), 0.0233369 s/step
+on time step 12868 (time=80.425), 0.0228667 s/step
+on time step 13042 (time=81.5125), 0.023104 s/step
+on time step 13217 (time=82.6063), 0.0228659 s/step
+on time step 13394 (time=83.7125), 0.0227218 s/step
+on time step 13566 (time=84.7875), 0.0233897 s/step
+on time step 13743 (time=85.8938), 0.0227116 s/step
+on time step 13922 (time=87.0125), 0.0224651 s/step
+on time step 14099 (time=88.1188), 0.0226048 s/step
+on time step 14284 (time=89.275), 0.0217024 s/step
+on time step 14469 (time=90.4313), 0.0216799 s/step
+on time step 14653 (time=91.5813), 0.0217802 s/step
+on time step 14838 (time=92.7375), 0.0216864 s/step
+on time step 15022 (time=93.8875), 0.0217762 s/step
+on time step 15200 (time=95), 0.0224751 s/step
+on time step 15383 (time=96.1438), 0.0219786 s/step
+on time step 15555 (time=97.2188), 0.0232854 s/step
+on time step 15730 (time=98.3125), 0.0228776 s/step
+on time step 15903 (time=99.3938), 0.0231866 s/step
+run 0 finished at t = 100.0125 (16002 timesteps)
+     block, center = (0,0,0)
+          size (89.9875,37.4875,0)
+          axes (1,0,0), (0,1,0), (0,0,1)
+     block, center = (-2.65945,-2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,-1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,-0.0840136,0), (0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,-0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,-0.0420068,0), (0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.5,0,0)
+          size (40,0.5,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.51765,0.840136,0)
+          size (40,0.5,1e+20)
+          axes (0.999117,0.0420068,0), (-0.0420068,0.999117,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.57071,1.68027,0)
+          size (40,0.5,1e+20)
+          axes (0.996465,0.0840136,0), (-0.0840136,0.996465,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,0.12602,0), (-0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (-2.78435,3.36054,0)
+          size (40,0.5,1e+20)
+          axes (0.985782,0.168027,0), (-0.168027,0.985782,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     block, center = (2.65945,2.52041,0)
+          size (40,0.5,1e+20)
+          axes (0.992028,-0.12602,0), (0.12602,0.992028,0), (0,0,1)
+          dielectric constant epsilon diagonal = (12,12,12)
+     ...(+ 7 objects not shown)...
+Error in create_pdf_output()
+
+Dumped structure to file: Simple_Star_Coupler_SM_DATA_7/structure.h5 (True)
+Dumped fields to file: Simple_Star_Coupler_SM_DATA_7/fields.h5 (True)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+MPB solved for frequency_1(0.645161,0,0) = 0.645161 after 8 iters
+Dominant planewave for band 1: (0.645161,-0.000000,0.000000)
+
+Elapsed run time = 11402.1129 s
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_0/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_0/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_1/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_1/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_2/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_2/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_3/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_3/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_4/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_4/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_5/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_5/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_6/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_6/fields.h5" (1)...
+creating epsilon from file "Simple_Star_Coupler_SM_DATA_7/structure.h5" (1)...
+creating fields output file "Simple_Star_Coupler_SM_DATA_7/fields.h5" (1)...
