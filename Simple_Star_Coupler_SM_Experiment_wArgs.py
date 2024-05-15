@@ -406,10 +406,10 @@ for iteration in range(first_iteration,last_iteration+1):
     export_monitors_to_pickle(input_monitors,iteration,"input")
     export_monitors_to_pickle(output_monitors,iteration,"output")
 
-    # try:
-    create_pdf_output(input_monitors, output_monitors, iteration)
-    # except:
-    #     print("Error in create_pdf_output()\n")
+    try:
+        create_pdf_output(input_monitors, output_monitors, iteration)
+    except:
+        print("Error in create_pdf_output()\n")
 
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
