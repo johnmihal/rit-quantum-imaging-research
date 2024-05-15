@@ -143,17 +143,17 @@ def create_pdf_output(input_monitors, output_monitors, iteration):
     # MAKE GRAPHS AND PDF
     figure,axes = plt.subplots()
 
-    sim.plot2D()
-    plt.show()
-    plt.savefig("PLOT.png")
+    # sim.plot2D()
+    # plt.show()
+    # plt.savefig("PLOT.png")
 
-    # fig1 = sim.plot2D(ax=axes,output_plane=mp.Volume(center=mp.Vector3(), size=mp.Vector3(l,w,0)),
-    #             fields=mp.Ez,
-    #             field_parameters={'alpha':0.9})
+    fig1 = sim.plot2D(ax=axes,output_plane=mp.Volume(center=mp.Vector3(), size=mp.Vector3(l,w,0)),
+                fields=mp.Ez,
+                field_parameters={'alpha':0.9})
     
-    # fig1.show()
-    # fig1.savefig('PLOT.png')
-    exit(0)
+    # # fig1.show()
+    # # fig1.savefig('PLOT.png')
+    # exit(0)
 
     waveguides = []
     for i in range(len(input_monitors)):
