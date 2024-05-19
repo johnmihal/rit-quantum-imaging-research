@@ -19,13 +19,14 @@ The `old code` folder conatins previous versions of the star coupler simuation c
 The `outputs` folder conatins all the outputs that the code produces. There are alot of outputs so putting them there declutters things,
 
 ## Running the Code <a name="1"></a>
-To run the main experiment activte the meep conda enviornment. The run the following command `./Simple_Star_Coupler_SM_Experiment_wArgs <first> <last> (--sv|--lv|--l) [--r=<um>] [--n=<>]`
+To run the main experiment activte the meep conda enviornment. The run the following command `./Simple_Star_Coupler_SM_Experiment_wArgs <first> <last> (--s|--sv|--lv|--l) [--r=<um>] [--n=<>]`
 
 Useage:
 ```
 Mandatory Values:
     first  First waveguide to test, inclusive.
     last   Last waveguide to test, inclusive.
+    --s
     --sv    Short test mode, with video.
     --lv   Long simulation, with video. 
     --l    Long simulation, no video.    
@@ -33,6 +34,8 @@ Options:
     --r=<um>  Star coupler radius (um) [default: 30].
     --n=<>    Number of waveguides on each side [default: 21].
 ```
+
+Note: Running the simulation with video is much slower. I found that at most of the time I ran in --lv (long video mode) the simluation would crash because making the video and normalizing all of the data took up too much space and absolutly killed the ram.
 
 The simulation will create folders with names such as `Simple_Star_coupler_SM_DATA_0`. This indicates that the folder contains data from testing the input on wave guide 0. The last number denotes the input waveguide for the test run. 
 
@@ -50,6 +53,8 @@ Meep is most easily installed using conda. Go to the meep website for informatio
 If your meep installaion keeps crashing when running the code and complains about a GSL error then it is because the GSL that comes with meep is broken. You will need to install the a compadible and not broken GSL version into your conda meep installation. Simply find the newest and compadible GSL that works with your meep stuff. 
 
 ## Where I Left Off <a name="3"></a>
+
+NEED TO EDiT THIS
 
 I was working on `tranfer_matrix.py` to generate the transfer matricies but unfortunatly I found major issues with the simulation code `Simple_Star_Coupler_SM_Experiment_wArgs.py`. 
 
