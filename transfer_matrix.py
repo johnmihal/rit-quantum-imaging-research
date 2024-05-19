@@ -90,10 +90,6 @@ def create_tranfer_matrix(data_folder):
 
         # print(files)
 
+    print("Tranfer Matrix: ")
     print(transfer_matrix)
     return transfer_matrix
-
-
-# this is used for testing
-if __name__ == '__main__':
-    create_tranfer_matrix("SSC_n8_r35_data")
