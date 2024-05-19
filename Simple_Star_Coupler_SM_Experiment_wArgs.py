@@ -241,7 +241,7 @@ def short_test_run(iteration):
         try:
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-            sim.run(mp.at_every(0.1, Animate), until=10)
+            sim.run(mp.at_every(0.5, Animate), until=100)
             filename = "Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
@@ -272,14 +272,17 @@ def error_msg_and_exit():
     print("Simple Star Coupler Meep Simulation: cmd line version")
     print()
     print("Usage:")
-    print("  Simple_Star_Coupler_SM_Experiment_wArgs <first> <last> (--sv|--lv|--l) [--r=<um>] [--n=<>]")
+    print("  Simple_Star_Coupler_SM_Experiment_wArgs <first> <last> (--s|--sv|--lv|--l) [--r=<um>] [--n=<>]")
     print()
     print("Mandatory Values:")
     print("  first  First waveguide to test, inclusive.")
     print("  last   Last waveguide to test, inclusive.")
+    print("  --s    Short test mode, no video.")
     print("  --sv    Short test mode, with video.")
     print("  --lv   Long simulation, with video. ")
     print("  --l    Long simulation, no video.")
+    print()
+    print("  Note: Running the simulation without video is much faster.")
     print()
     print("Options:")
     print("  --r=<um>  Star coupler radius (um) [default: 30].")
@@ -305,12 +308,21 @@ if len(sys.argv) >= 4:
 
     print(sys.argv)
 
-    if mode != "--sv" and mode != "--lv" and mode != "--l":
+    if mode != "--sv" and mode != "--lv" and mode != "--l" and mode != "--s":
         print("Invalid mode.")
         print()
         error_msg_and_exit()
 
-    if len(sys.argv) >= 5:
+    if len(sys.argv) == 5:
+        if sys.argv[4][0:4] == "--r=":
+            r = int(sys.argv[4][4:])
+            good_arguments = True
+
+        if sys.argv[4][0:4] == "--n=":
+            n = int(sys.argv[4][4:])
+            good_arguments = True
+
+    if len(sys.argv) >= 6:
         good_arguments = False
 
         if sys.argv[4][0:4] == "--r=":
@@ -393,23 +405,32 @@ for iteration in range(first_iteration,last_iteration+1):
     output_monitors = create_output_monitors();
     sim.init_sim()
 
-    if mode == "--sv":
+    sim.plot2D()
+    plt.show()
+
+    if mode == "--s":
+        sim.run(until=50)
+    elif mode == "--sv":
         short_test_run(iteration)
     elif mode == "--lv":
         run_and_make_video(iteration)
     elif mode == "--l":
         sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
-        
 
+    plt.close()
+    sim.plot2D(fields=mp.Ez)
+    plt.show()
+
+    # creates output folder, create_pdf_output needs this!!!
     sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
     export_monitors_to_pickle(input_monitors,iteration,"input")
     export_monitors_to_pickle(output_monitors,iteration,"output")
 
-    try:
-        create_pdf_output(input_monitors, output_monitors, iteration)
-    except:
-        print("Error in create_pdf_output()\n")
+    #try:
+    create_pdf_output(input_monitors, output_monitors, iteration)
+    #except:
+    #     print("Error in create_pdf_output()\n")
 
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
