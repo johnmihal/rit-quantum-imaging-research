@@ -7,6 +7,7 @@ import meep as mp
 import sys
 import pickle
 import math
+import os
 
 #from meep.materials import SiO2, Si
 # %matplotlib widget
@@ -241,7 +242,7 @@ def short_test_run(iteration):
         try:
             f = plt.figure(dpi=200)
             Animate = mp.Animate2D(fields=mp.Ez, f=f, realtime=False, normalize=True) 
-            sim.run(mp.at_every(0.5, Animate), until=100)
+            sim.run(mp.at_every(0.5, Animate), until=50)
             filename = "Simple_Star_Coupler_SM_DATA_" + str(iteration) + "/Simple_Star_Coupler_SM_VIDEO_" + str(iteration) + ".mp4"
             fps = 10
             Animate.to_mp4(fps, filename)
@@ -249,7 +250,7 @@ def short_test_run(iteration):
         except:
             print("Error occured in short_test_run()\n")
             print("     Issue with animation and mp4.\n")
-            sim.run(until=1)
+            sim.run(until=50)
            
 
 
@@ -394,6 +395,17 @@ print("rot_angles_output: ", rot_angles_output)
 for iteration in range(first_iteration,last_iteration+1):
     print("Iteration: ", iteration)
 
+    # creates output folder, create_pdf_output and the video outputs need this!!!
+    try:
+        os.mkdir("Simple_Star_Coupler_SM_DATA_" + str(iteration))
+    except:
+        print("Overwriting exisiting data folder: Simple_Star_Coupler_SM_DATA_" + str(iteration))
+
+
+    l,w,z = [r+(r*.3),30,0] # length,height,depth of the simulation region (um)
+    cell = mp.Vector3(l,w,z)
+
+
     sim = mp.Simulation(resolution = res,
                 cell_size = cell,
                 default_material=sio2,
@@ -405,8 +417,10 @@ for iteration in range(first_iteration,last_iteration+1):
     output_monitors = create_output_monitors();
     sim.init_sim()
 
-    sim.plot2D()
-    plt.show()
+    # for debugging
+    # plt.close()
+    # sim.plot2D()
+    # plt.show()
 
     if mode == "--s":
         sim.run(until=50)
@@ -417,20 +431,20 @@ for iteration in range(first_iteration,last_iteration+1):
     elif mode == "--l":
         sim.run(until_after_sources=mp.stop_when_fields_decayed(50, mp.Ez, pt=mp.Vector3(x=0), decay_by=1e-2))
 
-    plt.close()
-    sim.plot2D(fields=mp.Ez)
-    plt.show()
+    # for debugging
+    # plt.close()
+    # sim.plot2D(fields=mp.Ez)
+    # plt.show()
 
-    # creates output folder, create_pdf_output needs this!!!
     sim.dump("Simple_Star_Coupler_SM_DATA_" + str(iteration))
 
     export_monitors_to_pickle(input_monitors,iteration,"input")
     export_monitors_to_pickle(output_monitors,iteration,"output")
 
-    #try:
-    create_pdf_output(input_monitors, output_monitors, iteration)
-    #except:
-    #     print("Error in create_pdf_output()\n")
+    try:
+        create_pdf_output(input_monitors, output_monitors, iteration)
+    except:
+        print("Error in create_pdf_output()\n")
 
 
     sim.reset_meep() #ensure the next experiment is started with a clean slate
