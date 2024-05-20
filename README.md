@@ -45,6 +45,10 @@ The `transfer_matrix.py` uses this naming convention to load in the pickled data
 
 From there the tranfermatrix could be analyzed using the function in the `metrics.py` file. However at this time none of this is set up. 
 
+One nice thing to do when running the simulation is to run the code as such:
+`python Simple_Star_Coupler_SM_Experiment_wArgs.py 0 0 --l --r=35 --n=8 2>&1 | tee terminal.txt`
+The `2>&1 | tee terminal.txt` function puts all of the terminal output and errors into a file called terminal.txt, this is really helpful for debugging. If the simulation fails like 5 hours in having a record of what happened makes debugging much easier.
+
 
 ### Installing Meep <a name="2.1"></a>
 Meep is most easily installed using conda. Go to the meep website for information about this. Simply use the recomended conda install, all the other stuff is too complicated. For MacOS and Linux the install is simple, use recommended conda install. For windows install the WSL(Windows Subsystem for Linux) and install Meep onto the WSL as if it was a Mac or Linux machine.
