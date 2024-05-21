@@ -89,7 +89,6 @@ def create_tranfer_matrix(data_folder):
 
 
         # print(files)
-
-    print("Tranfer Matrix: ")
+    print("Transfer Matrix: ")
     print(transfer_matrix)
     return transfer_matrix

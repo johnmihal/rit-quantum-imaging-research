@@ -5,9 +5,13 @@ import pickle
 import math
 
 if __name__ == '__main__':
-    t_matrix = transfer_matrix.create_tranfer_matrix("sample_data")
+    data_folder = "SSC_Data_r35_n8" #CHANGE THIS TO WHATEVER YOU NEED
+    t_matrix = transfer_matrix.create_tranfer_matrix(data_folder)
 
     print()
+    print()
+    print("Transfer Matrix: ")
+    print(t_matrix)
     print()
     print("DATA ANALYSIS RESULTS")
     print()
